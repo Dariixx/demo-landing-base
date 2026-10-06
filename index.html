@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Propuesta de Optimización y Rendimiento Web</title>
+  <title>Kinetic Fisioterapia Málaga | Cita Previa & Fisioterapia Avanzada</title>
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Lucide Icons -->
@@ -13,11 +13,12 @@
       theme: {
         extend: {
           colors: {
-            brand: {
-              50: '#eff6ff',
-              500: '#2563eb',
-              600: '#1d4ed8',
-              700: '#1e40af',
+            kinetic: {
+              lime: '#84cc16',       /* Verde corporativo Kinetic */
+              limeHover: '#65a30d',
+              dark: '#0f172a',
+              card: '#1e293b',
+              border: '#334155'
             }
           }
         }
@@ -25,206 +26,289 @@
     }
   </script>
 </head>
-<body class="bg-slate-900 text-slate-100 antialiased font-sans selection:bg-blue-500 selection:text-white pb-24">
+<body class="bg-slate-950 text-slate-100 antialiased font-sans pb-24 selection:bg-lime-500 selection:text-slate-950">
 
-  <!-- BARRA SUPERIOR DE PROPUESTA (Para el vídeo / demo al cliente) -->
-  <aside class="bg-blue-600/20 border-b border-blue-500/30 px-4 py-2.5 backdrop-blur-md sticky top-0 z-50">
+  <!-- BARRA DE AUDITORÍA SUPERIOR (Ideal para mostrar en Loom) -->
+  <aside class="bg-lime-500/10 border-b border-lime-500/20 px-4 py-2.5 backdrop-blur-md sticky top-0 z-50">
     <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-3 text-xs sm:text-sm">
       <div class="flex items-center gap-2">
-        <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span class="text-slate-300">Auditoría y propuesta técnica para:</span>
-        <strong id="client-name-badge" class="text-white bg-slate-800 px-2 py-0.5 rounded border border-slate-700">Actio Clinic</strong>
+        <span class="flex h-2 w-2 rounded-full bg-lime-400 animate-pulse"></span>
+        <span class="text-slate-300">Propuesta de Modernización Web:</span>
+        <strong class="text-white bg-slate-900 px-2 py-0.5 rounded border border-slate-700">Kinetic Fisioterapia (Miraflores)</strong>
       </div>
       <div class="flex items-center gap-2">
-        <span class="text-slate-400 hidden md:inline">Optimización móvil & Carga rápida</span>
-        <span class="bg-emerald-500/20 text-emerald-300 font-semibold px-2 py-0.5 rounded border border-emerald-500/30">100/100 PageSpeed</span>
+        <span class="text-slate-400 hidden sm:inline">Experiencia desde 2007</span>
+        <span class="bg-lime-500/20 text-lime-400 font-bold px-2 py-0.5 rounded border border-lime-500/30">Móvil & WhatsApp 1-Clic</span>
       </div>
     </div>
   </aside>
 
   <!-- NAVEGACIÓN -->
-  <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+  <header class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between border-b border-slate-900">
     <div class="flex items-center gap-3">
-      <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center shadow-lg shadow-blue-500/20">
-        <i data-lucide="activity" class="w-5 h-5 text-white"></i>
-      </div>
-      <div>
-        <span id="nav-brand" class="font-bold text-lg text-white tracking-tight block">ACTIO CLINIC</span>
-        <span class="text-[10px] text-slate-400 tracking-wider uppercase block -mt-1">Fisioterapia & Readaptación</span>
+      <!-- Logo vectorizado con el estilo corporativo de Kinetic -->
+      <div class="flex items-center gap-2">
+        <div class="relative w-8 h-8 flex items-center justify-center">
+          <div class="w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-b-[20px] border-b-lime-500"></div>
+          <div class="w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[14px] border-t-slate-950 absolute top-2"></div>
+        </div>
+        <div class="leading-none">
+          <span class="font-black text-xl tracking-tight text-white block">kinetic</span>
+          <span class="text-xs font-semibold text-lime-400 tracking-widest block uppercase">fisioterapia</span>
+        </div>
       </div>
     </div>
-    <a href="#reservar" class="hidden sm:inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-semibold px-4 py-2 rounded-lg transition">
-      <i data-lucide="calendar" class="w-4 h-4 text-blue-400"></i> Pedir Cita Previa
-    </a>
+    
+    <div class="flex items-center gap-3">
+      <a href="tel:669583225" class="hidden sm:inline-flex items-center gap-2 text-xs font-semibold text-slate-300 hover:text-lime-400 transition">
+        <i data-lucide="phone-call" class="w-4 h-4 text-lime-400"></i> 669 583 225
+      </a>
+      <a href="#cita-rapida" class="inline-flex items-center gap-1.5 bg-lime-500 hover:bg-lime-600 text-slate-950 font-bold text-xs px-4 py-2 rounded-lg transition shadow-lg shadow-lime-500/20">
+        <i data-lucide="calendar" class="w-4 h-4"></i> Pedir Cita
+      </a>
+    </div>
   </header>
 
-  <!-- HERO SECTION CON IMPACTO -->
-  <main class="max-w-5xl mx-auto px-6 pt-8 pb-14 text-center">
-    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/80 border border-slate-700 text-xs text-slate-300 mb-6">
-      <i data-lucide="shield-check" class="w-3.5 h-3.5 text-blue-400"></i>
-      Fisioterapia Avanzada y Readaptación Deportiva en Málaga
+  <!-- HERO SECTION CON AUTORIDAD Y CONVENIOS -->
+  <main class="max-w-5xl mx-auto px-6 pt-10 pb-12 text-center">
+    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs text-slate-300 mb-6 shadow-inner">
+      <span class="text-lime-400 font-bold">Desde 2007</span>
+      <span class="text-slate-600">•</span>
+      <span>Camino de Suárez 103, Miraflores (Málaga)</span>
     </div>
 
     <h1 class="text-4xl sm:text-6xl font-black text-white tracking-tight leading-tight max-w-4xl mx-auto">
-      Recupera tu movilidad sin dolor y <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-300">vuelve a tu mejor nivel</span>
+      Fisioterapia personalizada y <span class="text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-emerald-400">recuperación activa de lesiones</span>
     </h1>
 
-    <p class="mt-6 text-base sm:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
-      Tratamientos clínicos individualizados con ecografía de alta resolución y planes de readaptación física enfocados en el origen de tu lesión.
+    <p class="mt-5 text-base sm:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+      Tratamos el origen del dolor mediante terapia manual avanzada, punción seca, readaptación funcional y suelo pélvico. Atención colegiada e individualizada.
     </p>
 
-    <!-- CTAs PRINCIPALES -->
+    <!-- CTAS -->
     <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
-      <a href="#triaje" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-7 py-3.5 rounded-xl shadow-lg shadow-blue-600/30 transition transform hover:-translate-y-0.5">
-        <i data-lucide="calendar-check" class="w-5 h-5"></i>
-        Consultar disponibilidad de cita
+      <a href="#cita-rapida" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-lime-500 hover:bg-lime-600 text-slate-950 font-black px-7 py-3.5 rounded-xl shadow-xl shadow-lime-500/20 transition transform hover:-translate-y-0.5">
+        <i data-lucide="message-square" class="w-5 h-5"></i>
+        Pedir cita directa por WhatsApp
       </a>
-      <button onclick="toggleComparativa()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold px-6 py-3.5 rounded-xl border border-slate-700 transition">
-        <i data-lucide="split" class="w-5 h-5 text-indigo-400"></i>
-        <span id="btn-compare-text">Ver Comparativa Antes / Después</span>
+      <button onclick="toggleAuditoria()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-300 font-semibold px-6 py-3.5 rounded-xl border border-slate-800 transition">
+        <i data-lucide="layers" class="w-4 h-4 text-lime-400"></i>
+        <span>Ver Auditoría de Cambios</span>
       </button>
     </div>
   </main>
 
-  <!-- CONTENEDOR MODAL/ACORDEÓN DE COMPARATIVA (Para mostrar en el vídeo) -->
-  <section id="comparativa-box" class="hidden max-w-5xl mx-auto px-6 mb-16">
-    <div class="bg-slate-800/90 border border-slate-700 rounded-2xl p-6 shadow-2xl">
-      <div class="flex items-center justify-between mb-4 border-b border-slate-700/60 pb-3">
-        <div class="flex items-center gap-2 font-bold text-sm text-slate-200">
-          <i data-lucide="layers" class="w-4 h-4 text-blue-400"></i> Auditoría de Fricción Visual y Conversión
-        </div>
-        <button onclick="toggleComparativa()" class="text-slate-400 hover:text-white text-xs">Cerrar ✕</button>
+  <!-- PANEL DE AUDITORÍA COMPARATIVA (Para mostrar en el vídeo) -->
+  <section id="auditoria-panel" class="hidden max-w-5xl mx-auto px-6 mb-14">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-2xl">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+        <span class="font-bold text-sm text-slate-200 flex items-center gap-2">
+          <i data-lucide="check-circle" class="w-4 h-4 text-lime-400"></i> Fricciones detectadas y resueltas en esta propuesta
+        </span>
+        <button onclick="toggleAuditoria()" class="text-slate-500 hover:text-white text-xs">Cerrar ✕</button>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-        <div class="bg-red-950/20 border border-red-900/40 p-4 rounded-xl">
-          <span class="font-bold text-red-400 flex items-center gap-1.5 mb-2">
-            <i data-lucide="alert-triangle" class="w-4 h-4"></i> Versión Anterior
-          </span>
-          <ul class="space-y-1.5 text-slate-300 list-disc list-inside">
-            <li>Textos en tono salmón claro sobre blanco (dificulta la lectura).</li>
-            <li>Espacios vacíos desproporcionados sin jerarquía clara.</li>
-            <li>Botón de cita pequeño y perdido en el fondo.</li>
-            <li>Fuga de pacientes que entran desde el móvil.</li>
+        <div class="bg-red-950/30 border border-red-900/50 p-4 rounded-xl space-y-2">
+          <p class="font-bold text-red-400">Web Actual:</p>
+          <ul class="text-slate-300 space-y-1 list-disc list-inside">
+            <li>Formulario de contacto estático de 5 campos (lento de rellenar en móvil).</li>
+            <li>Listado de servicios en texto plano con viñetas sin jerarquía visual.</li>
+            <li>Convenios (Metro, Policía, UMA) acumulados en una imagen vertical difícil de leer.</li>
+            <li>La dirección de correo aparece escrita con "(arroba)" para evitar spam.</li>
           </ul>
         </div>
-        <div class="bg-emerald-950/20 border border-emerald-900/40 p-4 rounded-xl">
-          <span class="font-bold text-emerald-400 flex items-center gap-1.5 mb-2">
-            <i data-lucide="check-circle" class="w-4 h-4"></i> Versión Optimizada
-          </span>
-          <ul class="space-y-1.5 text-slate-300 list-disc list-inside">
-            <li>Contraste optimizado según estándares de accesibilidad WCAG.</li>
-            <li>Tarjetas de servicios estructuradas con foco clínico.</li>
-            <li>Triaje interactivo con mensaje precargado a WhatsApp.</li>
-            <li>Carga instantánea en menos de 0.8 segundos.</li>
+        <div class="bg-lime-950/30 border border-lime-900/50 p-4 rounded-xl space-y-2">
+          <p class="font-bold text-lime-400">Versión Optimizada:</p>
+          <ul class="text-slate-300 space-y-1 list-disc list-inside">
+            <li>Módulo de selección de lesión y cita con mensaje directo a WhatsApp.</li>
+            <li>Tarjetas modulares para cada especialidad con llamadas a la acción.</li>
+            <li>Banda dinámica y ordenada de entidades colaboradoras y convenios.</li>
+            <li>Acceso directo con enlaces interactivos a Google Maps y llamadas en 1 clic.</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SERVICIOS CON TARJETAS LIMPIAS Y CONTRASTE ÓPTIMO -->
-  <section class="max-w-5xl mx-auto px-6 py-10">
-    <div class="text-center max-w-xl mx-auto mb-10">
-      <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Especialidades Clínicas</h2>
-      <p class="text-slate-400 text-sm mt-2">Tecnología diagnóstica y tratamiento manual adaptado a tu caso.</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <!-- Tarjeta 1 -->
-      <article class="bg-slate-800/60 border border-slate-700/60 rounded-2xl p-6 hover:border-blue-500/50 transition">
-        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center mb-5">
-          <i data-lucide="bone" class="w-6 h-6"></i>
-        </div>
-        <h3 class="text-lg font-bold text-white mb-2">Fisioterapia Clínica</h3>
-        <p class="text-slate-400 text-xs leading-relaxed mb-4">
-          Terapia manual avanzada, punción seca y neuromodulación para lesiones musculares, articulares y de columna.
-        </p>
-        <span class="inline-flex items-center text-xs font-semibold text-blue-400 gap-1">
-          Sesión con valoración incluida <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-        </span>
-      </article>
-
-      <!-- Tarjeta 2 -->
-      <article class="bg-slate-800/60 border border-slate-700/60 rounded-2xl p-6 hover:border-blue-500/50 transition">
-        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center mb-5">
-          <i data-lucide="scan" class="w-6 h-6"></i>
-        </div>
-        <h3 class="text-lg font-bold text-white mb-2">Ecografía Musculoesquelética</h3>
-        <p class="text-slate-400 text-xs leading-relaxed mb-4">
-          Valoración visual en tiempo real para un diagnóstico preciso de roturas fibrilares, tendinopatías y esguinces.
-        </p>
-        <span class="inline-flex items-center text-xs font-semibold text-indigo-400 gap-1">
-          Diagnóstico guiado <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-        </span>
-      </article>
-
-      <!-- Tarjeta 3 -->
-      <article class="bg-slate-800/60 border border-slate-700/60 rounded-2xl p-6 hover:border-blue-500/50 transition">
-        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-5">
-          <i data-lucide="dumbbell" class="w-6 h-6"></i>
-        </div>
-        <h3 class="text-lg font-bold text-white mb-2">Readaptación & Ejercicio</h3>
-        <p class="text-slate-400 text-xs leading-relaxed mb-4">
-          Entrenamiento terapéutico supervisado para consolidar la recuperación y prevenir recaídas deportivas o laborales.
-        </p>
-        <span class="inline-flex items-center text-xs font-semibold text-emerald-400 gap-1">
-          Plan personalizado <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-        </span>
-      </article>
+  <!-- BANDA DE CONVENIOS Y ACREDITACIONES (Social Proof) -->
+  <section class="max-w-5xl mx-auto px-6 py-8 border-y border-slate-900 my-4">
+    <p class="text-center text-xs font-semibold text-slate-500 uppercase tracking-widest mb-6">
+      Centro Colegiado • Convenios y Descuentos Especiales
+    </p>
+    <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs font-bold text-slate-400">
+      <span class="flex items-center gap-1.5 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">
+        <i data-lucide="shield" class="w-4 h-4 text-lime-400"></i> Colegio Fisioterapeutas Andalucía
+      </span>
+      <span class="flex items-center gap-1.5 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">
+        <i data-lucide="train" class="w-4 h-4 text-lime-400"></i> Metro Málaga
+      </span>
+      <span class="flex items-center gap-1.5 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">
+        <i data-lucide="badge-check" class="w-4 h-4 text-lime-400"></i> Sindicatos SUP & SIP-AN
+      </span>
+      <span class="flex items-center gap-1.5 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">
+        <i data-lucide="bike" class="w-4 h-4 text-lime-400"></i> Federación Andaluza Ciclismo
+      </span>
+      <span class="flex items-center gap-1.5 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">
+        <i data-lucide="graduation-cap" class="w-4 h-4 text-lime-400"></i> Universidad de Málaga (UMA)
+      </span>
     </div>
   </section>
 
-  <!-- MÓDULO DE TRIAJE RÁPIDO PARA EL PACIENTE -->
-  <section id="triaje" class="max-w-3xl mx-auto px-6 py-12">
-    <div class="bg-gradient-to-b from-slate-800 to-slate-900 border border-slate-700 rounded-3xl p-6 sm:p-8 shadow-xl">
+  <!-- SERVICIOS PRINCIPALES (Reestructurados en tarjetas) -->
+  <section class="max-w-6xl mx-auto px-6 py-12">
+    <div class="text-center max-w-xl mx-auto mb-10">
+      <span class="text-xs font-bold text-lime-400 uppercase tracking-wider">Tratamientos</span>
+      <h2 class="text-2xl sm:text-3xl font-black text-white mt-1">Especialidades en Consulta</h2>
+      <p class="text-slate-400 text-xs mt-2">Protocolos específicos adaptados a la necesidad y recuperación de cada paciente.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <!-- Traumatología y Deportiva -->
+      <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl hover:border-lime-500/40 transition">
+        <div class="w-10 h-10 rounded-xl bg-lime-500/10 text-lime-400 flex items-center justify-center mb-4">
+          <i data-lucide="activity" class="w-5 h-5"></i>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2">Lesiones Traumatológicas & Deportivas</h3>
+        <p class="text-slate-400 text-xs leading-relaxed">
+          Recuperación funcional de esguinces, fracturas, tendinitis y sobrecargas musculares para volver a la rutina sin dolor.
+        </p>
+      </div>
+
+      <!-- Punción Seca -->
+      <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl hover:border-lime-500/40 transition">
+        <div class="w-10 h-10 rounded-xl bg-lime-500/10 text-lime-400 flex items-center justify-center mb-4">
+          <i data-lucide="crosshair" class="w-5 h-5"></i>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2">Punción Seca</h3>
+        <p class="text-slate-400 text-xs leading-relaxed">
+          Técnica semi-invasiva directa a los puntos gatillo miofasciales para desactivar contracturas profundas e irradiadas.
+        </p>
+      </div>
+
+      <!-- Suelo Pélvico -->
+      <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl hover:border-lime-500/40 transition">
+        <div class="w-10 h-10 rounded-xl bg-lime-500/10 text-lime-400 flex items-center justify-center mb-4">
+          <i data-lucide="heart" class="w-5 h-5"></i>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2">Tratamientos de Suelo Pélvico</h3>
+        <p class="text-slate-400 text-xs leading-relaxed">
+          Atención especializada en embarazo, postparto, lumbalgias, incontinencia urinaria y disfunciones perineales.
+        </p>
+      </div>
+
+      <!-- Drenaje Linfático Manual -->
+      <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl hover:border-lime-500/40 transition">
+        <div class="w-10 h-10 rounded-xl bg-lime-500/10 text-lime-400 flex items-center justify-center mb-4">
+          <i data-lucide="droplet" class="w-5 h-5"></i>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2">Drenaje Linfático Manual</h3>
+        <p class="text-slate-400 text-xs leading-relaxed">
+          Activación de la circulación linfática para eliminar edemas, piernas cansadas y optimizar recuperaciones postquirúrgicas.
+        </p>
+      </div>
+
+      <!-- Masaje Terapéutico y Reumatología -->
+      <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl hover:border-lime-500/40 transition">
+        <div class="w-10 h-10 rounded-xl bg-lime-500/10 text-lime-400 flex items-center justify-center mb-4">
+          <i data-lucide="hand" class="w-5 h-5"></i>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2">Terapia Manual & Reumatología</h3>
+        <p class="text-slate-400 text-xs leading-relaxed">
+          Alivio sintomático para artrosis, artritis y fibromialgia, devolviendo movilidad a las articulaciones con técnicas no agresivas.
+        </p>
+      </div>
+
+      <!-- Ejercicio Terapéutico y Kinesiotaping -->
+      <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl hover:border-lime-500/40 transition">
+        <div class="w-10 h-10 rounded-xl bg-lime-500/10 text-lime-400 flex items-center justify-center mb-4">
+          <i data-lucide="sparkles" class="w-5 h-5"></i>
+        </div>
+        <h3 class="text-base font-bold text-white mb-2">Readaptación & Vendaje Neuromuscular</h3>
+        <p class="text-slate-400 text-xs leading-relaxed">
+          Pautas activas de ejercicio y vendaje neuromuscular (kinesiotaping) para mantener la estabilidad y evitar recaídas.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MÓDULO INTERACTIVO DE CITA RÁPIDA (Sustituye al formulario lento) -->
+  <section id="cita-rapida" class="max-w-2xl mx-auto px-6 py-10">
+    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+      <div class="absolute -top-12 -right-12 w-32 h-32 bg-lime-500/10 rounded-full blur-2xl pointer-events-none"></div>
+
       <div class="text-center mb-6">
-        <span class="text-xs font-bold uppercase tracking-widest text-blue-400">Reserva Express</span>
-        <h3 class="text-xl sm:text-2xl font-bold text-white mt-1">¿Qué necesitas tratar?</h3>
-        <p class="text-slate-400 text-xs mt-1">Selecciona tu caso para abrir WhatsApp con los datos ya completados.</p>
+        <span class="text-xs font-bold uppercase tracking-widest text-lime-400">Reserva de Cita</span>
+        <h3 class="text-xl sm:text-2xl font-black text-white mt-1">¿Qué consulta o tratamiento necesitas?</h3>
+        <p class="text-slate-400 text-xs mt-1">Selecciona tus datos para iniciar la conversación por WhatsApp con la clínica.</p>
       </div>
 
       <div class="space-y-4">
         <div>
-          <label class="block text-xs font-medium text-slate-300 mb-1.5">1. Selecciona el servicio:</label>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
-            <button type="button" onclick="selectService(this, 'Fisioterapia General')" class="service-btn bg-slate-800 border border-slate-700 text-slate-300 py-2.5 px-3 rounded-xl hover:border-blue-500 transition text-left flex items-center justify-between">
-              <span>Fisioterapia</span>
-              <i data-lucide="check" class="w-3.5 h-3.5 opacity-0"></i>
+          <label class="block text-xs font-semibold text-slate-300 mb-2">1. Motivo de la visita:</label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+            <button type="button" onclick="selectService(this, 'Lesión o Dolor Muscular')" class="service-opt bg-slate-950 border border-slate-800 text-slate-300 p-3 rounded-xl hover:border-lime-500 transition text-left flex justify-between items-center">
+              <span>Lesión / Dolor muscular</span>
+              <i data-lucide="check" class="w-3.5 h-3.5 opacity-0 text-lime-400"></i>
             </button>
-            <button type="button" onclick="selectService(this, 'Ecografía y Lesión')" class="service-btn bg-slate-800 border border-slate-700 text-slate-300 py-2.5 px-3 rounded-xl hover:border-blue-500 transition text-left flex items-center justify-between">
-              <span>Ecografía / Diagnóstico</span>
-              <i data-lucide="check" class="w-3.5 h-3.5 opacity-0"></i>
+            <button type="button" onclick="selectService(this, 'Punción Seca')" class="service-opt bg-slate-950 border border-slate-800 text-slate-300 p-3 rounded-xl hover:border-lime-500 transition text-left flex justify-between items-center">
+              <span>Punción seca</span>
+              <i data-lucide="check" class="w-3.5 h-3.5 opacity-0 text-lime-400"></i>
             </button>
-            <button type="button" onclick="selectService(this, 'Readaptación / Entrenamiento')" class="service-btn bg-slate-800 border border-slate-700 text-slate-300 py-2.5 px-3 rounded-xl hover:border-blue-500 transition text-left flex items-center justify-between">
-              <span>Readaptación</span>
-              <i data-lucide="check" class="w-3.5 h-3.5 opacity-0"></i>
+            <button type="button" onclick="selectService(this, 'Suelo Pélvico')" class="service-opt bg-slate-950 border border-slate-800 text-slate-300 p-3 rounded-xl hover:border-lime-500 transition text-left flex justify-between items-center">
+              <span>Suelo pélvico</span>
+              <i data-lucide="check" class="w-3.5 h-3.5 opacity-0 text-lime-400"></i>
+            </button>
+            <button type="button" onclick="selectService(this, 'Drenaje Linfático')" class="service-opt bg-slate-950 border border-slate-800 text-slate-300 p-3 rounded-xl hover:border-lime-500 transition text-left flex justify-between items-center">
+              <span>Drenaje linfático</span>
+              <i data-lucide="check" class="w-3.5 h-3.5 opacity-0 text-lime-400"></i>
             </button>
           </div>
         </div>
 
         <div>
-          <label class="block text-xs font-medium text-slate-300 mb-1.5">2. Preferencia de horario:</label>
+          <label class="block text-xs font-semibold text-slate-300 mb-2">2. Franja horaria preferente:</label>
           <div class="grid grid-cols-2 gap-2 text-xs">
-            <button type="button" onclick="selectTime(this, 'Mañanas (09:00 - 14:00)')" class="time-btn bg-slate-800 border border-slate-700 text-slate-300 py-2 px-3 rounded-xl hover:border-blue-500 transition text-center">
+            <button type="button" onclick="selectSchedule(this, 'Mañanas')" class="time-opt bg-slate-950 border border-slate-800 text-slate-300 py-2.5 px-3 rounded-xl hover:border-lime-500 transition text-center font-medium">
               Mañanas
             </button>
-            <button type="button" onclick="selectTime(this, 'Tardes (15:00 - 21:00)')" class="time-btn bg-slate-800 border border-slate-700 text-slate-300 py-2 px-3 rounded-xl hover:border-blue-500 transition text-center">
+            <button type="button" onclick="selectSchedule(this, 'Tardes')" class="time-opt bg-slate-950 border border-slate-800 text-slate-300 py-2.5 px-3 rounded-xl hover:border-lime-500 transition text-center font-medium">
               Tardes
             </button>
           </div>
         </div>
 
-        <button onclick="enviarWhatsApp()" class="w-full mt-4 flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg transition">
+        <button onclick="solicitarCitaWhatsApp()" class="w-full mt-2 flex items-center justify-center gap-2 bg-lime-500 hover:bg-lime-600 text-slate-950 font-black py-3.5 px-4 rounded-xl shadow-lg shadow-lime-500/20 transition transform hover:-translate-y-0.5">
           <i data-lucide="message-circle" class="w-5 h-5"></i>
           Solicitar cita por WhatsApp
         </button>
+
+        <p class="text-[11px] text-center text-slate-500">
+          O llama al teléfono fijo de la clínica: <a href="tel:952394033" class="text-slate-300 underline">952 394 033</a>
+        </p>
       </div>
+    </div>
+  </section>
+
+  <!-- UBICACIÓN Y TRANSPORTE PÚBLICO -->
+  <section class="max-w-5xl mx-auto px-6 py-8">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col md:flex-row gap-6 justify-between items-start md:items-center">
+      <div class="space-y-1">
+        <span class="text-xs font-bold text-lime-400 uppercase">Localización</span>
+        <h4 class="text-base font-bold text-white">Clínica en Miraflores de los Ángeles</h4>
+        <p class="text-slate-400 text-xs">Camino de Suárez, 103, 2ºA, 29010 Málaga.</p>
+        <p class="text-slate-400 text-xs flex items-center gap-1.5 pt-1">
+          <i data-lucide="bus" class="w-3.5 h-3.5 text-lime-400"></i> Conexión en autobús: Líneas 8, 7, 18, C1 y C2 (Parada Camino Suárez).
+        </p>
+      </div>
+      <a href="https://maps.google.com/?q=Camino+de+Suarez+103+Malaga" target="_blank" class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold px-4 py-2.5 rounded-xl border border-slate-700 transition">
+        <i data-lucide="map-pin" class="w-4 h-4 text-lime-400"></i> Abrir en Google Maps
+      </a>
     </div>
   </section>
 
   <!-- BOTÓN FLOTANTE PERMANENTE -->
   <aside class="fixed bottom-5 right-5 z-40">
-    <button onclick="enviarWhatsApp()" class="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-5 rounded-full shadow-2xl transition transform hover:scale-105 border border-emerald-400/30">
+    <button onclick="solicitarCitaWhatsApp()" class="flex items-center gap-2 bg-lime-500 hover:bg-lime-600 text-slate-950 font-black py-3 px-5 rounded-full shadow-2xl transition transform hover:scale-105 border border-lime-400/50">
       <i data-lucide="message-circle" class="w-5 h-5"></i>
       <span class="text-sm">Pedir Cita</span>
     </button>
@@ -234,37 +318,37 @@
   <script>
     lucide.createIcons();
 
-    let servicioSeleccionado = "Fisioterapia General";
-    let horarioSeleccionado = "Tardes";
-    const telefonoClinica = "34624154846"; // Teléfono de Actio Clinic
+    let servicioElegido = "Lesión o Dolor Muscular";
+    let horarioElegido = "Tardes";
+    const telefonoWhatsApp = "34669583225"; // Teléfono extraído de su web (669 583 225)
 
-    function selectService(btn, nombre) {
-      document.querySelectorAll('.service-btn').forEach(b => {
-        b.classList.remove('border-blue-500', 'bg-blue-500/10', 'text-blue-300');
-        b.querySelector('svg')?.classList.add('opacity-0');
+    function selectService(el, servicio) {
+      document.querySelectorAll('.service-opt').forEach(btn => {
+        btn.classList.remove('border-lime-500', 'bg-lime-500/10', 'text-lime-300');
+        btn.querySelector('svg')?.classList.add('opacity-0');
       });
-      btn.classList.add('border-blue-500', 'bg-blue-500/10', 'text-blue-300');
-      btn.querySelector('svg')?.classList.remove('opacity-0');
-      servicioSeleccionado = nombre;
+      el.classList.add('border-lime-500', 'bg-lime-500/10', 'text-lime-300');
+      el.querySelector('svg')?.classList.remove('opacity-0');
+      servicioElegido = servicio;
     }
 
-    function selectTime(btn, horario) {
-      document.querySelectorAll('.time-btn').forEach(b => {
-        b.classList.remove('border-blue-500', 'bg-blue-500/10', 'text-blue-300');
+    function selectSchedule(el, horario) {
+      document.querySelectorAll('.time-opt').forEach(btn => {
+        btn.classList.remove('border-lime-500', 'bg-lime-500/10', 'text-lime-300');
       });
-      btn.classList.add('border-blue-500', 'bg-blue-500/10', 'text-blue-300');
-      horarioSeleccionado = horario;
+      el.classList.add('border-lime-500', 'bg-lime-500/10', 'text-lime-300');
+      horarioElegido = horario;
     }
 
-    function enviarWhatsApp() {
-      const mensaje = `Hola Actio Clinic, me gustaría consultar disponibilidad de cita para ${servicioSeleccionado} en horario de ${horarioSeleccionado}.`;
-      const url = `https://wa.me/${telefonoClinica}?text=${encodeURIComponent(mensaje)}`;
+    function solicitarCitaWhatsApp() {
+      const mensaje = `Hola Kinetic Fisioterapia, me gustaría solicitar cita previa para ${servicioElegido} en horario de ${horarioElegido}.`;
+      const url = `https://wa.me/${telefonoWhatsApp}?text=${encodeURIComponent(mensaje)}`;
       window.open(url, '_blank');
     }
 
-    function toggleComparativa() {
-      const box = document.getElementById('comparativa-box');
-      box.classList.toggle('hidden');
+    function toggleAuditoria() {
+      const panel = document.getElementById('auditoria-panel');
+      panel.classList.toggle('hidden');
     }
   </script>
 </body>
