@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JMS Fontanería Málaga | Reparación de Averías, Fugas y Desatascos</title>
+  <title>Fontanería en Málaga provincia - JMS Fontanería Málaga</title>
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Lucide Icons -->
@@ -13,326 +13,472 @@
       theme: {
         extend: {
           colors: {
-            jms: {
-              blue: '#0284c7',       // Azul fontanería profesional
-              blueDark: '#0369a1',
-              navy: '#0f172a',
-              accent: '#38bdf8',
-              surface: '#f8fafc'
-            }
+            jmsBlue: '#0066ff',
+            jmsDark: '#0e1318',
+            jmsCard: '#151b22',
+            jmsBorder: '#27313f'
           }
         }
       }
     }
   </script>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased font-sans selection:bg-sky-500 selection:text-white pb-24">
+<body class="bg-white text-stone-900 font-sans antialiased selection:bg-blue-600 selection:text-white pb-24 sm:pb-0">
 
-  <!-- BARRA DE AUDITORÍA SUPERIOR (Para demostración y comparativa en vídeo) -->
-  <aside class="bg-slate-900 text-slate-300 text-xs px-4 py-2 border-b border-slate-800 sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
-      <div class="flex items-center gap-2">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span>Propuesta Técnica de Rendimiento: <strong>JMS Fontanería Málaga</strong></span>
-      </div>
-      <div class="flex items-center gap-3">
-        <span class="text-slate-400 hidden sm:inline">Unidades Móviles en toda la provincia</span>
-        <button onclick="toggleAuditoria()" class="bg-slate-800 hover:bg-slate-700 text-white px-2.5 py-0.5 rounded text-[11px] border border-slate-700">
-          ¿Qué se ha optimizado?
-        </button>
+  <!-- TOP BAR CON TELÉFONOS REALES Y DIRECCIÓN -->
+  <div class="bg-stone-100 border-b border-stone-200 py-1.5 px-4 text-xs text-stone-600 hidden md:block">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <span class="flex items-center gap-1.5">
+        <i data-lucide="map-pin" class="w-3.5 h-3.5 text-blue-600"></i> Calle Ibrahin 18, local 12, 29011 Málaga
+      </span>
+      <div class="flex items-center gap-5">
+        <a href="tel:635154330" class="hover:text-blue-600 font-semibold flex items-center gap-1">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-blue-600"></i> 635 15 43 30
+        </a>
+        <a href="mailto:fontaneromalaga@gmail.com" class="hover:text-blue-600 flex items-center gap-1">
+          <i data-lucide="mail" class="w-3.5 h-3.5 text-blue-600"></i> fontaneromalaga@gmail.com
+        </a>
       </div>
     </div>
-  </aside>
+  </div>
 
-  <!-- PANEL DESPLEGABLE DE AUDITORÍA -->
-  <section id="panel-auditoria" class="hidden bg-white border-b border-slate-200 px-6 py-4 text-xs text-slate-700 shadow-inner">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
-      <div>
-        <strong class="text-slate-900 block mb-1">1. Fricción Telefónica Eliminada:</strong>
-        <p class="text-slate-600">Se unifican los números dispersos en accesos directos de llamada y WhatsApp con mensaje precargado.</p>
+  <!-- NAVEGACIÓN PRINCIPAL (Idéntica a la original con cambio de idioma) -->
+  <header class="bg-white border-b border-stone-200 sticky top-0 z-40 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-8">
+        <a href="#">
+          <img src="https://fontaneriamalaga.com/wp-content/uploads/2023/04/LOGO-JMS.png" alt="JMS Fontanería Málaga" class="h-11 sm:h-12 w-auto object-contain" />
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-stone-700">
+          <a href="#" class="text-blue-600">Inicio</a>
+          <a href="#quienes-somos" class="hover:text-blue-600 transition">Quiénes somos</a>
+          <a href="#servicios" class="hover:text-blue-600 transition">Servicios</a>
+          <a href="#contacto" class="hover:text-blue-600 transition">Contacto</a>
+        </nav>
       </div>
-      <div>
-        <strong class="text-slate-900 block mb-1">2. Presupuesto con Foto Inmediato:</strong>
-        <p class="text-slate-600">El cliente elige avería y localidad (Málaga, Torremolinos, Mijas...), agilizando el cálculo de costes para el técnico.</p>
-      </div>
-      <div>
-        <strong class="text-slate-900 block mb-1">3. Confianza y Garantía:</strong>
-        <p class="text-slate-600">Presencia destacada de empresa autorizada, taller propio de materiales y cobertura provincial rápida.</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- CABECERA PRINCIPAL -->
-  <header class="bg-white border-b border-slate-200 sticky top-8 z-40 shadow-sm">
-    <div class="max-w-6xl mx-auto px-5 py-3.5 flex items-center justify-between">
-      <!-- Logo Oficial Extraído -->
-      <a href="#" class="flex items-center">
-        <img src="https://fontaneriamalaga.com/wp-content/uploads/2023/04/LOGO-JMS.png" alt="JMS Fontanería Málaga" class="h-10 sm:h-12 w-auto object-contain" />
-      </a>
-
-      <!-- Contacto de Llamada Rápida -->
       <div class="flex items-center gap-3">
-        <div class="hidden md:flex flex-col text-right text-xs">
-          <span class="text-slate-500 font-medium">Atención Inmediata</span>
-          <a href="tel:648576639" class="font-extrabold text-slate-900 hover:text-sky-600 text-sm">648 57 66 39</a>
+        <!-- Idiomas oficiales de su web -->
+        <div class="flex items-center gap-1 border border-stone-200 rounded-lg p-1">
+          <img src="https://fontaneriamalaga.com/wp-content/plugins/gtranslate/flags/24/es.png" alt="Español" class="w-5 h-auto cursor-pointer" />
+          <img src="https://fontaneriamalaga.com/wp-content/plugins/gtranslate/flags/24/en.png" alt="English" class="w-5 h-auto cursor-pointer opacity-50 hover:opacity-100" />
         </div>
-        <a href="tel:648576639" class="inline-flex items-center gap-2 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-md transition">
+        <a href="tel:648576639" class="bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow-md transition flex items-center gap-1.5">
           <i data-lucide="phone-call" class="w-4 h-4"></i>
-          <span>Llamar Ahora</span>
+          <span class="hidden sm:inline">Llamar urgente</span>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- HERO SECTION CON CERTIDUMBRE Y SERVICIOS -->
-  <section class="max-w-6xl mx-auto px-5 pt-8 pb-12">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+  <!-- HERO SECTION EXACTA DE SU WEB (Lado izquierdo oscuro + Lado derecho imagen oficial) -->
+  <section class="max-w-6xl mx-auto px-4 py-6 sm:py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 rounded-3xl overflow-hidden shadow-xl border border-stone-800">
       
-      <div class="lg:col-span-7 space-y-5">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 text-xs font-semibold text-sky-900">
-          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-sky-600"></i>
-          Empresa Autorizada de Fontanería en Málaga
+      <!-- Columna izquierda oscura con patrón (estilo captura original) -->
+      <div class="lg:col-span-6 bg-stone-950 text-white p-7 sm:p-10 flex flex-col justify-center space-y-4 relative">
+        <div class="space-y-1">
+          <p class="text-xs font-bold tracking-widest text-blue-500 uppercase">EMPRESA AUTORIZADA DE</p>
+          <h1 class="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
+            FONTANERÍA en <span class="text-blue-500">MÁLAGA</span>
+          </h1>
         </div>
 
-        <h1 class="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
-          Reparación de averías, <span class="text-sky-600">fugas de agua</span> y desatascos sin sorpresas
-        </h1>
+        <div class="pt-2">
+          <p class="text-xs font-bold text-stone-400 uppercase tracking-wider">Servicios a</p>
+          <p class="text-base sm:text-lg font-extrabold text-stone-100 uppercase tracking-wide">
+            PARTICULARES, EMPRESAS Y COMUNIDADES DE PROPIETARIOS
+          </p>
+        </div>
 
-        <p class="text-slate-600 text-sm sm:text-base leading-relaxed max-w-xl">
-          Servicios integrales para particulares, empresas y comunidades de propietarios. Taller propio de materiales, localización de fugas sin romper y sustitución de termos y tuberías.
+        <p class="text-xs sm:text-sm text-stone-400 leading-relaxed pt-1">
+          Servicios a particulares, empresas y comunidades de propietarios para solucionar cualquier problema que surja, arreglando y gestionando cualquier tipo de avería.
         </p>
 
-        <!-- Botones de Acción -->
-        <div class="flex flex-col sm:flex-row gap-3 pt-2">
-          <a href="#cotizador" class="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-md transition">
-            <i data-lucide="message-circle" class="w-5 h-5"></i>
-            Pedir Presupuesto por WhatsApp (648 57 66 39)
+        <div class="pt-2 flex flex-wrap gap-3">
+          <a href="#servicios" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-5 py-3 rounded-xl transition">
+            MÁS INFORMACIÓN <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
-          <a href="tel:951770440" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-800 font-semibold text-xs sm:text-sm px-5 py-3.5 rounded-xl border border-slate-300 transition">
-            <i data-lucide="phone" class="w-4 h-4 text-slate-600"></i>
-            Fijo: 951 77 04 40
+          <a href="tel:648576639" class="inline-flex items-center gap-2 bg-stone-900 hover:bg-stone-800 text-stone-200 border border-stone-800 font-semibold text-xs px-4 py-3 rounded-xl transition">
+            <i data-lucide="phone" class="w-4 h-4 text-blue-500"></i> 648 57 66 39
           </a>
-        </div>
-
-        <!-- Badges de Garantía -->
-        <div class="pt-4 flex flex-wrap gap-y-2 gap-x-6 text-xs text-slate-500 border-t border-slate-200">
-          <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-sky-600"></i> Taller propio de recambios</span>
-          <span class="flex items-center gap-1.5"><i data-lucide="truck" class="w-4 h-4 text-sky-600"></i> Unidades móviles equipadas</span>
-          <span class="flex items-center gap-1.5"><i data-lucide="file-text" class="w-4 h-4 text-sky-600"></i> Factura y garantía oficial</span>
         </div>
       </div>
 
-      <!-- Imagen Real de Fontanería Extraída -->
-      <div class="lg:col-span-5">
-        <div class="relative rounded-2xl overflow-hidden border border-slate-200 shadow-xl bg-white">
-          <img 
-            src="https://fontaneriamalaga.com/wp-content/uploads/2023/05/JMS-fontaneria-provincia-Malaga.jpg" 
-            alt="JMS Fontanería en Málaga" 
-            class="w-full h-72 sm:h-80 object-cover"
-          />
-          <div class="absolute bottom-0 inset-x-0 bg-slate-900/85 px-4 py-3 text-white flex items-center justify-between text-xs backdrop-blur-sm">
-            <span class="font-bold text-sky-400">Atención técnica autorizada</span>
-            <span class="text-slate-300">Toda la provincia</span>
-          </div>
-        </div>
+      <!-- Columna derecha: Foto oficial del fontanero con el lavabo -->
+      <div class="lg:col-span-6 bg-stone-100 min-h-[300px] lg:min-h-full">
+        <img 
+          src="https://fontaneriamalaga.com/wp-content/uploads/2023/05/JMS-fontaneria-provincia-Malaga.jpg" 
+          alt="JMS Fontanería Provincia de Málaga" 
+          class="w-full h-full object-cover"
+        />
       </div>
 
     </div>
   </section>
 
-  <!-- BANDA DE COBERTURA PROVINCIAL -->
-  <section class="max-w-6xl mx-auto px-5 py-4">
-    <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
-      <p class="text-center text-xs font-bold uppercase tracking-widest text-slate-500 mb-3">
-        Unidades Móviles con Asistencia en:
-      </p>
-      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs font-semibold text-slate-700">
-        <span class="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">Málaga Capital</span>
-        <span class="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">Torremolinos</span>
-        <span class="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">Benalmádena</span>
-        <span class="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">Fuengirola</span>
-        <span class="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">Mijas</span>
-        <span class="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">Rincón de la Victoria</span>
+  <!-- BANNER AZUL DE CONTACTO (Idéntico a su banner original) -->
+  <section class="max-w-6xl mx-auto px-4 -mt-2 mb-8">
+    <div class="bg-blue-600 text-white rounded-2xl p-6 sm:p-7 shadow-lg flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-wider text-blue-100 block">CONTACTA CON NOSOTROS</span>
+        <h2 class="text-2xl sm:text-3xl font-black mt-0.5 tracking-tight">951 77 04 40 / 648 57 66 39</h2>
+      </div>
+      <div class="flex gap-3">
+        <a href="tel:951770440" class="inline-flex items-center gap-2 bg-white text-blue-600 font-extrabold text-xs px-4 py-3 rounded-xl hover:bg-blue-50 transition shadow-sm">
+          <i data-lucide="phone" class="w-4 h-4"></i> Llamar al Fijo
+        </a>
+        <a href="tel:648576639" class="inline-flex items-center gap-2 bg-stone-950 text-white font-extrabold text-xs px-4 py-3 rounded-xl hover:bg-stone-900 transition shadow-sm">
+          <i data-lucide="smartphone" class="w-4 h-4 text-blue-400"></i> Llamar al Móvil
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- MÓDULO INTERACTIVO DE PRESUPUESTO RÁPIDO CON FOTO -->
-  <section id="cotizador" class="max-w-2xl mx-auto px-5 py-8">
-    <div class="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+  <!-- MÓDULO INTERACTIVO DE PRESUPUESTO CON FOTO POR WHATSAPP (Optimización directa para cerrar avisos) -->
+  <section class="max-w-4xl mx-auto px-4 mb-14">
+    <div class="bg-stone-950 border border-stone-800 rounded-3xl p-6 sm:p-8 text-white shadow-xl">
       <div class="text-center mb-6">
-        <span class="text-xs font-bold uppercase tracking-widest text-sky-400">Presupuesto en 1 Clic</span>
-        <h3 class="text-xl sm:text-2xl font-black mt-1">¿Qué avería necesitas solucionar?</h3>
-        <p class="text-slate-400 text-xs mt-1">Selecciona el tipo de trabajo y tu zona para abrir WhatsApp con los datos ya completados.</p>
+        <span class="text-xs font-bold uppercase tracking-widest text-blue-400">Presupuesto en 1 Clic</span>
+        <h3 class="text-xl sm:text-2xl font-black mt-1">¿Qué avería o instalación necesitas?</h3>
+        <p class="text-stone-400 text-xs mt-1">Selecciona el tipo de trabajo y tu municipio para enviar los datos directos al fontanero de guardia por WhatsApp.</p>
       </div>
 
       <div class="space-y-4">
         <div>
-          <label class="block text-xs font-semibold text-slate-300 mb-2">1. Tipo de avería o servicio:</label>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-            <button type="button" onclick="setAveria(this, 'Fuga de agua o Humedad')" class="btn-averia bg-slate-800 border border-slate-700 py-3 px-3 rounded-xl hover:border-sky-400 text-left">
-              Fuga de agua / Humedad
+          <label class="block text-xs font-semibold text-stone-300 mb-2">1. Selecciona la avería o servicio:</label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 text-xs">
+            <button type="button" onclick="setAveria(this, 'Localización de fugas de agua')" class="btn-averia bg-stone-900 border border-stone-800 py-3 px-3 rounded-xl hover:border-blue-500 text-left">
+              Localización de fugas de agua
             </button>
-            <button type="button" onclick="setAveria(this, 'Desatasco de tubería o fregadero')" class="btn-averia bg-slate-800 border border-slate-700 py-3 px-3 rounded-xl hover:border-sky-400 text-left">
-              Desatasco urgente
+            <button type="button" onclick="setAveria(this, 'Desatascos de tuberías')" class="btn-averia bg-stone-900 border border-stone-800 py-3 px-3 rounded-xl hover:border-blue-500 text-left">
+              Desatascos urgentes
             </button>
-            <button type="button" onclick="setAveria(this, 'Cambio o reparación de Termo / Calentador')" class="btn-averia bg-slate-800 border border-slate-700 py-3 px-3 rounded-xl hover:border-sky-400 text-left">
-              Termos y calentadores
+            <button type="button" onclick="setAveria(this, 'Instalación y reparación de tuberías')" class="btn-averia bg-stone-900 border border-stone-800 py-3 px-3 rounded-xl hover:border-blue-500 text-left">
+              Reparación de tuberías
             </button>
-            <button type="button" onclick="setAveria(this, 'Grifería, Sanitarios o Reforma')" class="btn-averia bg-slate-800 border border-slate-700 py-3 px-3 rounded-xl hover:border-sky-400 text-left">
-              Grifería / Sanitarios / Baño
+            <button type="button" onclick="setAveria(this, 'Griferías y sanitarios')" class="btn-averia bg-stone-900 border border-stone-800 py-3 px-3 rounded-xl hover:border-blue-500 text-left">
+              Griferías y sanitarios
+            </button>
+            <button type="button" onclick="setAveria(this, 'Calentadores y termos eléctricos')" class="btn-averia bg-stone-900 border border-stone-800 py-3 px-3 rounded-xl hover:border-blue-500 text-left">
+              Calentadores y termos
+            </button>
+            <button type="button" onclick="setAveria(this, 'Reformas y cambio bañera por ducha')" class="btn-averia bg-stone-900 border border-stone-800 py-3 px-3 rounded-xl hover:border-blue-500 text-left">
+              Reformas / Plato de ducha
             </button>
           </div>
         </div>
 
         <div>
-          <label class="block text-xs font-semibold text-slate-300 mb-2">2. Zona o municipio:</label>
-          <div class="grid grid-cols-3 gap-2 text-xs">
-            <button type="button" onclick="setZona(this, 'Málaga Capital')" class="btn-zona bg-slate-800 border border-slate-700 py-2.5 px-2 rounded-xl hover:border-sky-400 text-center font-medium">
-              Málaga Centro / Barrios
-            </button>
-            <button type="button" onclick="setZona(this, 'Costa Occidental (Torremolinos, Fuengirola, Mijas)')" class="btn-zona bg-slate-800 border border-slate-700 py-2.5 px-2 rounded-xl hover:border-sky-400 text-center font-medium">
-              Costa Occidental
-            </button>
-            <button type="button" onclick="setZona(this, 'Rincón de la Victoria / Axarquía')" class="btn-zona bg-slate-800 border border-slate-700 py-2.5 px-2 rounded-xl hover:border-sky-400 text-center font-medium">
-              Rincón de la Victoria
-            </button>
+          <label class="block text-xs font-semibold text-stone-300 mb-2">2. Localidad de la provincia de Málaga:</label>
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 text-xs">
+            <button type="button" onclick="setZona(this, 'Málaga')" class="btn-zona bg-stone-900 border border-stone-800 py-2 rounded-xl hover:border-blue-500 text-center font-medium">Málaga</button>
+            <button type="button" onclick="setZona(this, 'Torremolinos')" class="btn-zona bg-stone-900 border border-stone-800 py-2 rounded-xl hover:border-blue-500 text-center font-medium">Torremolinos</button>
+            <button type="button" onclick="setZona(this, 'Benalmádena')" class="btn-zona bg-stone-900 border border-stone-800 py-2 rounded-xl hover:border-blue-500 text-center font-medium">Benalmádena</button>
+            <button type="button" onclick="setZona(this, 'Fuengirola')" class="btn-zona bg-stone-900 border border-stone-800 py-2 rounded-xl hover:border-blue-500 text-center font-medium">Fuengirola</button>
+            <button type="button" onclick="setZona(this, 'Mijas')" class="btn-zona bg-stone-900 border border-stone-800 py-2 rounded-xl hover:border-blue-500 text-center font-medium">Mijas</button>
+            <button type="button" onclick="setZona(this, 'Rincón de la Victoria')" class="btn-zona bg-stone-900 border border-stone-800 py-2 rounded-xl hover:border-blue-500 text-center font-medium">Rincón Victoria</button>
           </div>
         </div>
 
-        <button onclick="enviarWhatsAppPresupuesto()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black py-4 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition shadow-lg mt-2">
+        <button onclick="enviarWhatsAppPresupuesto()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black py-4 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition shadow-lg mt-3">
           <i data-lucide="message-circle" class="w-5 h-5"></i>
-          <span>Enviar avería por WhatsApp para presupuesto rápido</span>
+          <span>Pedir presupuesto por WhatsApp (puedes adjuntar foto de la avería)</span>
         </button>
+      </div>
+    </div>
+  </section>
 
-        <p class="text-center text-[11px] text-slate-400">
-          Puedes adjuntar una foto de la avería al abrir WhatsApp para agilizar el diagnóstico.
+  <!-- SERVICIOS DE FONTANERÍA (Iconos y textos originales de la web) -->
+  <section id="servicios" class="max-w-6xl mx-auto px-4 py-8">
+    <div class="text-center max-w-2xl mx-auto mb-10">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">Servicios de fontanería</h2>
+      <p class="text-xs sm:text-sm text-stone-600 mt-2">
+        JMS Fontanería y Servicios es la solución a sus problemas cotidianos. Tenga a un fontanero a mano siempre que lo necesite.
+      </p>
+    </div>
+
+    <!-- Grid de Servicios con los iconos PNG oficiales extraídos -->
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+      <!-- 1 -->
+      <div class="bg-stone-50 border border-stone-200 rounded-2xl p-5 hover:border-blue-500 hover:shadow-md transition text-center flex flex-col items-center">
+        <div class="h-16 w-16 mb-3 flex items-center justify-center">
+          <img src="https://fontaneriamalaga.com/wp-content/uploads/2023/04/plumbing-icon-12-1.png" alt="Griferías y Sanitarios" class="h-12 w-auto object-contain" />
+        </div>
+        <h4 class="font-bold text-sm sm:text-base text-stone-900">Griferías y Sanitarios</h4>
+        <p class="text-stone-500 text-xs mt-1.5 leading-relaxed">Reparación e instalación de griferías, sistemas sanitarios, lavabos y waters.</p>
+      </div>
+
+      <!-- 2 -->
+      <div class="bg-stone-50 border border-stone-200 rounded-2xl p-5 hover:border-blue-500 hover:shadow-md transition text-center flex flex-col items-center">
+        <div class="h-16 w-16 mb-3 flex items-center justify-center">
+          <img src="https://fontaneriamalaga.com/wp-content/uploads/2023/04/plumbing-icon-11-1.png" alt="Instalación y reparación de tuberías" class="h-12 w-auto object-contain" />
+        </div>
+        <h4 class="font-bold text-sm sm:text-base text-stone-900">Instalación y reparación de tuberías</h4>
+        <p class="text-stone-500 text-xs mt-1.5 leading-relaxed">Trabajos con todo tipo de tuberías en viviendas y comunidades de vecinos.</p>
+      </div>
+
+      <!-- 3 -->
+      <div class="bg-stone-50 border border-stone-200 rounded-2xl p-5 hover:border-blue-500 hover:shadow-md transition text-center flex flex-col items-center">
+        <div class="h-16 w-16 mb-3 flex items-center justify-center">
+          <img src="https://fontaneriamalaga.com/wp-content/uploads/2023/04/plumbing-icon-3-1.png" alt="Localizaciones de fugas de agua" class="h-12 w-auto object-contain" />
+        </div>
+        <h4 class="font-bold text-sm sm:text-base text-stone-900">Localizaciones de fugas de agua</h4>
+        <p class="text-stone-500 text-xs mt-1.5 leading-relaxed">Detección y control de humedades y fugas ocultas para evitar obras mayores.</p>
+      </div>
+
+      <!-- 4 -->
+      <div class="bg-stone-50 border border-stone-200 rounded-2xl p-5 hover:border-blue-500 hover:shadow-md transition text-center flex flex-col items-center">
+        <div class="h-16 w-16 mb-3 flex items-center justify-center">
+          <img src="https://fontaneriamalaga.com/wp-content/uploads/2023/04/plumbing-icon-1-1.png" alt="Descalcificación de tuberías" class="h-12 w-auto object-contain" />
+        </div>
+        <h4 class="font-bold text-sm sm:text-base text-stone-900">Descalcificación de tuberías</h4>
+        <p class="text-stone-500 text-xs mt-1.5 leading-relaxed">Limpieza profunda de cal y recuperación de presión en redes de agua potable.</p>
+      </div>
+
+      <!-- 5 -->
+      <div class="bg-stone-50 border border-stone-200 rounded-2xl p-5 hover:border-blue-500 hover:shadow-md transition text-center flex flex-col items-center">
+        <div class="h-16 w-16 mb-3 flex items-center justify-center">
+          <img src="https://fontaneriamalaga.com/wp-content/uploads/2023/04/plumbing-icon-2-1.png" alt="Desatascos" class="h-12 w-auto object-contain" />
+        </div>
+        <h4 class="font-bold text-sm sm:text-base text-stone-900">Desatascos</h4>
+        <p class="text-stone-500 text-xs mt-1.5 leading-relaxed">Desobstrucción inmediata de fregaderos, bajantes, inodoros y arquetas.</p>
+      </div>
+
+      <!-- 6 -->
+      <div class="bg-stone-50 border border-stone-200 rounded-2xl p-5 hover:border-blue-500 hover:shadow-md transition text-center flex flex-col items-center">
+        <div class="h-16 w-16 mb-3 flex items-center justify-center">
+          <img src="https://fontaneriamalaga.com/wp-content/uploads/2023/04/plumbing-icon-10-1.png" alt="Reformas" class="h-12 w-auto object-contain" />
+        </div>
+        <h4 class="font-bold text-sm sm:text-base text-stone-900">Reformas</h4>
+        <p class="text-stone-500 text-xs mt-1.5 leading-relaxed">Remodelación completa de baños, cambio de grifería y obras integrales.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOQUE DE DETALLE TÉCNICO CON LAS 2 FOTOS OFICIALES DE TUBERÍAS -->
+  <section class="max-w-6xl mx-auto px-4 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+      <div class="rounded-2xl overflow-hidden border border-stone-200 h-64 sm:h-72 shadow-md">
+        <img src="https://fontaneriamalaga.com/wp-content/uploads/2023/04/plumber-4e.jpg" alt="Instalación y reparación de tuberías" class="w-full h-full object-cover" />
+      </div>
+      <div class="rounded-2xl overflow-hidden border border-stone-200 h-64 sm:h-72 shadow-md">
+        <img src="https://fontaneriamalaga.com/wp-content/uploads/2023/04/plumber-5.jpg" alt="Reparación de sanitarios y calderas" class="w-full h-full object-cover" />
+      </div>
+    </div>
+
+    <div class="bg-stone-50 border border-stone-200 rounded-2xl p-6 sm:p-8 space-y-4">
+      <h2 class="text-xl sm:text-2xl font-black text-stone-900 leading-snug">
+        Instalación y reparación de tuberías, griferías, sanitarios, calentadores a gas y eléctricos y más
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs sm:text-sm text-stone-600">
+        <p>
+          Fontaneros altamente cualificados para efectuar servicios de <strong>instalación y reparación de tuberías</strong>, tanto <strong>en viviendas</strong> como en <strong>comunidades de vecinos</strong>. <strong>Taller propio de materiales.</strong>
+        </p>
+        <p>
+          Realización de todo tipo de reparaciones e instalaciones de <strong>griferías y sistemas sanitarios, lavabos, waters</strong>. Servicios de <strong>cambio de grifería, remodelación y reparación de baños</strong>.
+        </p>
+        <p>
+          Suministro y montaje de <strong>calentadores y termos adaptados</strong> a su vivienda o negocio.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- SERVICIOS PRINCIPALES (Reestructurados en Tarjetas Limpias) -->
-  <section class="max-w-6xl mx-auto px-5 py-10">
-    <div class="text-center max-w-xl mx-auto mb-10">
-      <span class="text-xs font-bold uppercase tracking-wider text-sky-600">Servicios Especializados</span>
-      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Fontanería Profesional y Reformas</h2>
-      <p class="text-xs sm:text-sm text-slate-600 mt-1">Equipamiento técnico para resolver incidencias domésticas o comunitarias.</p>
-    </div>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-      <!-- 1. Fugas -->
-      <article class="bg-white border border-slate-200 p-6 rounded-2xl hover:border-sky-500 transition shadow-sm">
-        <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center mb-3">
-          <i data-lucide="search" class="w-5 h-5"></i>
-        </div>
-        <h3 class="font-bold text-base text-slate-900 mb-2">Localización de Fugas de Agua</h3>
-        <p class="text-xs text-slate-600 leading-relaxed">
-          Detección técnica de fugas ocultas y humedades en paredes y suelos minimizando obras innecesarias.
+  <!-- BANNER DE UNIDADES MÓVILES EN LA PROVINCIA DE MÁLAGA (Azul corporativo) -->
+  <section class="max-w-6xl mx-auto px-4 py-4">
+    <div class="bg-blue-600 text-white rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left shadow-lg">
+      <div class="space-y-1">
+        <h2 class="text-xl sm:text-2xl font-black">Unidades Móviles en la provincia de Málaga</h2>
+        <p class="text-blue-100 text-xs sm:text-sm">
+          Málaga, Torremolinos, Benalmádena, Fuengirola, Mijas y Rincón de la Victoria
         </p>
-      </article>
-
-      <!-- 2. Desatascos -->
-      <article class="bg-white border border-slate-200 p-6 rounded-2xl hover:border-sky-500 transition shadow-sm">
-        <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center mb-3">
-          <i data-lucide="droplet" class="w-5 h-5"></i>
-        </div>
-        <h3 class="font-bold text-base text-slate-900 mb-2">Desatascos y Limpieza de Tuberías</h3>
-        <p class="text-xs text-slate-600 leading-relaxed">
-          Desobstrucción rápida de fregaderos, inodoros, botes sifónicos, arquetas y bajantes comunitarias.
-        </p>
-      </article>
-
-      <!-- 3. Tuberías y Descalcificación -->
-      <article class="bg-white border border-slate-200 p-6 rounded-2xl hover:border-sky-500 transition shadow-sm">
-        <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center mb-3">
-          <i data-lucide="wrench" class="w-5 h-5"></i>
-        </div>
-        <h3 class="font-bold text-base text-slate-900 mb-2">Instalación y Descalcificación</h3>
-        <p class="text-xs text-slate-600 leading-relaxed">
-          Sustitución de tuberías de plomo o hierro por cobre o multicapa, y limpieza de cal para recuperar presión.
-        </p>
-      </article>
-
-      <!-- 4. Termos y Calentadores -->
-      <article class="bg-white border border-slate-200 p-6 rounded-2xl hover:border-sky-500 transition shadow-sm">
-        <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center mb-3">
-          <i data-lucide="flame" class="w-5 h-5"></i>
-        </div>
-        <h3 class="font-bold text-base text-slate-900 mb-2">Termos y Calentadores</h3>
-        <p class="text-xs text-slate-600 leading-relaxed">
-          Suministro e instalación urgente de termos eléctricos y calentadores de gas de primeras marcas.
-        </p>
-      </article>
-
-      <!-- 5. Grifería y Sanitarios -->
-      <article class="bg-white border border-slate-200 p-6 rounded-2xl hover:border-sky-500 transition shadow-sm">
-        <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center mb-3">
-          <i data-lucide="bath" class="w-5 h-5"></i>
-        </div>
-        <h3 class="font-bold text-base text-slate-900 mb-2">Griferías y Sanitarios</h3>
-        <p class="text-xs text-slate-600 leading-relaxed">
-          Montaje y reparación de llaves de paso, cisternas con fugas, lavabos, bidés e inodoros.
-        </p>
-      </article>
-
-      <!-- 6. Reformas de Albañilería -->
-      <article class="bg-white border border-slate-200 p-6 rounded-2xl hover:border-sky-500 transition shadow-sm">
-        <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center mb-3">
-          <i data-lucide="hammer" class="w-5 h-5"></i>
-        </div>
-        <h3 class="font-bold text-base text-slate-900 mb-2">Cambio de Bañera por Ducha</h3>
-        <p class="text-xs text-slate-600 leading-relaxed">
-          Servicio integral de albañilería: alicatados, solados, pladur y adaptación accesible de cuartos de baño.
-        </p>
-      </article>
+      </div>
+      <a href="tel:648576639" class="bg-stone-950 hover:bg-stone-900 text-white font-bold text-xs px-5 py-3 rounded-xl transition flex items-center gap-2 shrink-0">
+        <i data-lucide="truck" class="w-4 h-4 text-blue-400"></i>
+        <span>Solicitar Unidad Móvil</span>
+      </a>
     </div>
   </section>
 
-  <!-- UBICACIÓN Y TALLER PROPIO -->
-  <section class="max-w-6xl mx-auto px-5 py-8">
-    <div class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
+  <!-- SECCIÓN QUIÉNES SOMOS (Extraída del JSON de Quiénes Somos) -->
+  <section id="quienes-somos" class="max-w-6xl mx-auto px-4 py-10">
+    <div class="bg-white border border-stone-200 rounded-3xl p-6 sm:p-10 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div class="lg:col-span-7 space-y-4">
+        <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Quiénes Somos</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-stone-900 leading-tight">
+          Más de 30 años de experiencia en el sector de la fontanería
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+          Empresa especializada en el sector de la fontanería, contamos con más de 30 años de experiencia tanto en el mundo de las reparaciones como de las instalaciones. Ofrecemos servicio en toda Málaga y su provincia.
+        </p>
+        <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+          Somos una empresa de construcción especializada en el sector de la fontanería. Realizamos trabajos con todo tipo de tuberías y sanitarios. Nuestro equipo podrá asesorarle con cualquier problema que se le presente ya que contamos con personal propio de otros oficios, para la ejecución de los trabajos a realizar.
+        </p>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="rounded-2xl overflow-hidden border border-stone-200 shadow-md">
+          <img src="https://fontaneriamalaga.com/wp-content/uploads/2023/04/plumber-16.jpg" alt="Quiénes somos JMS Fontanería" class="w-full h-72 object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS DE ALBAÑILERÍA Y REFORMAS (Imagen oficial y listado exacto) -->
+  <section class="max-w-6xl mx-auto px-4 py-6">
+    <div class="bg-stone-50 border border-stone-200 rounded-3xl p-6 sm:p-8 shadow-sm">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         
-        <div class="lg:col-span-6 space-y-4">
-          <span class="text-xs font-bold uppercase tracking-wider text-sky-600">Sede y Taller Oficial</span>
-          <h3 class="text-2xl font-black text-slate-900">JMS Fontanería en Málaga</h3>
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl overflow-hidden border border-stone-200 shadow-md">
+            <img src="https://fontaneriamalaga.com/wp-content/uploads/2023/05/Servicios-de-Albanileria-JMS-servicio-albanileria.jpg" alt="Servicios de Albañilería JMS" class="w-full h-64 sm:h-72 object-cover" />
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-4">
+          <span class="text-xs font-bold uppercase tracking-wider text-blue-600">SERVICIOS DE ALBAÑILERÍA</span>
+          <h2 class="text-2xl font-black text-stone-900">Reformas en General</h2>
+          <p class="text-xs sm:text-sm text-stone-600">Trabajamos codo con codo con los mejores profesionales de cada oficio para reformas completas:</p>
           
-          <div class="space-y-1.5 text-xs text-slate-600">
-            <p><strong>Dirección:</strong> Calle Ibrahin 18, Local 12, 29011 Málaga.</p>
-            <p><strong>Teléfonos:</strong> 951 77 04 40 / 648 57 66 39 / 635 15 43 30</p>
-            <p><strong>Email:</strong> fontaneromalaga@gmail.com</p>
+          <div class="grid grid-cols-2 gap-2.5 text-xs font-semibold text-stone-700 pt-1">
+            <span class="flex items-center gap-2 bg-white px-3 py-2 rounded-xl border border-stone-200"><i data-lucide="check" class="w-4 h-4 text-blue-600"></i> Cambio bañera por plato ducha</span>
+            <span class="flex items-center gap-2 bg-white px-3 py-2 rounded-xl border border-stone-200"><i data-lucide="check" class="w-4 h-4 text-blue-600"></i> Alicatados</span>
+            <span class="flex items-center gap-2 bg-white px-3 py-2 rounded-xl border border-stone-200"><i data-lucide="check" class="w-4 h-4 text-blue-600"></i> Solados</span>
+            <span class="flex items-center gap-2 bg-white px-3 py-2 rounded-xl border border-stone-200"><i data-lucide="check" class="w-4 h-4 text-blue-600"></i> Yesos</span>
+            <span class="flex items-center gap-2 bg-white px-3 py-2 rounded-xl border border-stone-200"><i data-lucide="check" class="w-4 h-4 text-blue-600"></i> Pladur</span>
+            <span class="flex items-center gap-2 bg-white px-3 py-2 rounded-xl border border-stone-200"><i data-lucide="check" class="w-4 h-4 text-blue-600"></i> Escayola</span>
           </div>
 
-          <p class="text-xs text-slate-600">
-            Disponemos de taller propio de materiales para garantizar recambios inmediatos en tuberías, piezas de calderas y grifería sin demoras de intermediarios.
-          </p>
-
-          <div>
-            <a href="https://maps.google.com/?q=Calle+Ibrahin+18+Malaga" target="_blank" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold px-4 py-2.5 rounded-lg transition">
-              <i data-lucide="navigation" class="w-4 h-4 text-sky-400"></i> Abrir en Google Maps
+          <div class="pt-2">
+            <a href="tel:648576639" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-5 py-3 rounded-xl transition">
+              <i data-lucide="calendar" class="w-4 h-4"></i> Contacte y pida cita: 951 77 04 40 / 648 57 66 39
             </a>
           </div>
         </div>
 
-        <div class="lg:col-span-6">
-          <div class="rounded-2xl overflow-hidden border border-slate-300 shadow-md h-72 sm:h-80 w-full bg-slate-200">
-            <iframe 
-              title="Ubicación de JMS Fontanería"
-              src="https://maps.google.com/maps?q=Calle%20Ibrahin%2018%20Malaga&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-              class="w-full h-full border-0" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULARIO DE CONTACTO Y DATOS DE EMPRESA (Del JSON de Contacto) -->
+  <section id="contacto" class="max-w-6xl mx-auto px-4 py-12">
+    <div class="bg-stone-950 text-white rounded-3xl p-6 sm:p-10 shadow-2xl">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        
+        <!-- Info de Contacto -->
+        <div class="lg:col-span-5 space-y-5">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-blue-500">CONTACTO</span>
+            <h2 class="text-2xl sm:text-3xl font-black mt-1">Escríbanos para cualquier consulta</h2>
+            <p class="text-stone-400 text-xs sm:text-sm mt-2">
+              En JMS Fontanería queremos darle el mejor de los servicios. Contacte para pedir presupuesto sin compromiso o para cualquier emergencia.
+            </p>
           </div>
+
+          <div class="space-y-3 text-xs sm:text-sm">
+            <div class="flex items-start gap-3">
+              <i data-lucide="map-pin" class="w-5 h-5 text-blue-500 shrink-0 mt-0.5"></i>
+              <div>
+                <strong class="text-white block">Dirección:</strong>
+                <span class="text-stone-400">Calle Ibrahin 18, local 12, 29011 Málaga</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <i data-lucide="phone" class="w-5 h-5 text-blue-500 shrink-0 mt-0.5"></i>
+              <div>
+                <strong class="text-white block">Teléfonos de atención:</strong>
+                <a href="tel:951770440" class="text-stone-300 hover:text-white underline block">951 77 04 40</a>
+                <a href="tel:648576639" class="text-stone-300 hover:text-white underline block">648 57 66 39</a>
+                <a href="tel:635154330" class="text-stone-300 hover:text-white underline block">635 15 43 30</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <i data-lucide="mail" class="w-5 h-5 text-blue-500 shrink-0 mt-0.5"></i>
+              <div>
+                <strong class="text-white block">Correo Electrónico:</strong>
+                <a href="mailto:fontaneromalaga@gmail.com" class="text-stone-300 hover:text-white underline">fontaneromalaga@gmail.com</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Redes Sociales y Logo UE -->
+          <div class="pt-4 border-t border-stone-800 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="text-xs font-semibold text-stone-400">Redes sociales:</span>
+              <a href="https://www.facebook.com/jmsfontaneria/?locale=es_ES" target="_blank" class="w-8 h-8 rounded-lg bg-stone-900 border border-stone-800 flex items-center justify-center text-stone-300 hover:text-blue-500 transition">
+                <i data-lucide="facebook" class="w-4 h-4"></i>
+              </a>
+              <a href="https://www.instagram.com/serviciosjms/?hl=es" target="_blank" class="w-8 h-8 rounded-lg bg-stone-900 border border-stone-800 flex items-center justify-center text-stone-300 hover:text-pink-500 transition">
+                <i data-lucide="instagram" class="w-4 h-4"></i>
+              </a>
+            </div>
+            <img src="https://fontaneriamalaga.com/wp-content/uploads/2023/04/Logo-Red-UE.webp" alt="Logo Red UE" class="h-6 w-auto object-contain opacity-70" />
+          </div>
+        </div>
+
+        <!-- Formulario sin desconfiguración -->
+        <div class="lg:col-span-7 bg-stone-900 border border-stone-800 rounded-2xl p-6">
+          <form onsubmit="event.preventDefault(); enviarFormulario();" class="space-y-4">
+            <div>
+              <label class="block text-xs font-medium text-stone-300 mb-1">Nombre y Apellidos</label>
+              <input type="text" id="form-nombre" required placeholder="Tu nombre" class="w-full bg-stone-950 border border-stone-800 rounded-xl px-4 py-2.5 text-xs text-white placeholder-stone-600 focus:outline-none focus:border-blue-500" />
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-medium text-stone-300 mb-1">Teléfono</label>
+                <input type="tel" id="form-telefono" required placeholder="600 000 000" class="w-full bg-stone-950 border border-stone-800 rounded-xl px-4 py-2.5 text-xs text-white placeholder-stone-600 focus:outline-none focus:border-blue-500" />
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-stone-300 mb-1">Dirección de correo electrónico</label>
+                <input type="email" id="form-email" required placeholder="correo@ejemplo.com" class="w-full bg-stone-950 border border-stone-800 rounded-xl px-4 py-2.5 text-xs text-white placeholder-stone-600 focus:outline-none focus:border-blue-500" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-medium text-stone-300 mb-1">Detalle de la consulta o avería</label>
+              <textarea id="form-mensaje" rows="3" placeholder="Explique brevemente qué necesita solucionar..." class="w-full bg-stone-950 border border-stone-800 rounded-xl px-4 py-2.5 text-xs text-white placeholder-stone-600 focus:outline-none focus:border-blue-500"></textarea>
+            </div>
+
+            <div class="flex items-center gap-2 pt-1">
+              <input type="checkbox" id="privacidad" required class="rounded bg-stone-950 border-stone-800 text-blue-600 focus:ring-0" />
+              <label for="privacidad" class="text-[11px] text-stone-400">
+                Acepto las condiciones de la Política de privacidad.
+              </label>
+            </div>
+
+            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-4 rounded-xl text-xs transition">
+              CONSULTAR / ENVIAR MENSAJE
+            </button>
+          </form>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- BOTÓN FLOTANTE PERMANENTE -->
-  <aside class="fixed bottom-5 right-5 z-40">
+  <!-- PIE DE PÁGINA (Con mapa de sitio oficial y avisos legales) -->
+  <footer class="bg-stone-100 border-t border-stone-200 py-8 text-xs text-stone-600">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-4 font-medium">
+        <a href="#" class="hover:text-blue-600">Inicio</a>
+        <span>•</span>
+        <a href="#quienes-somos" class="hover:text-blue-600">Quiénes Somos</a>
+        <span>•</span>
+        <a href="#servicios" class="hover:text-blue-600">Servicios</a>
+        <span>•</span>
+        <a href="#contacto" class="hover:text-blue-600">Contacto</a>
+      </div>
+      <p class="text-center sm:text-right text-[11px] text-stone-500">
+        © Copyright 2023 · JMS Fontaneros | Diseñado por Ruano Informática S.L. | Aviso Legal | Política de Privacidad | Declaración de accesibilidad
+      </p>
+    </div>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE PERMANENTE PARA MÓVILES (Conexión directa por WhatsApp) -->
+  <aside class="fixed bottom-4 right-4 z-50">
     <button onclick="enviarWhatsAppPresupuesto()" class="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-black py-3 px-5 rounded-full shadow-2xl transition transform hover:scale-105 border border-emerald-400/40">
       <i data-lucide="message-circle" class="w-5 h-5"></i>
       <span class="text-xs sm:text-sm">Presupuesto WhatsApp</span>
@@ -343,34 +489,37 @@
   <script>
     lucide.createIcons();
 
-    let averiaSeleccionada = "Fuga de agua o Humedad";
-    let zonaSeleccionada = "Málaga Capital";
-    const telefonoWhatsApp = "34648576639"; // Número principal de JMS
+    let averiaSeleccionada = "Localización de fugas de agua";
+    let zonaSeleccionada = "Málaga";
+    const telefonoWhatsApp = "34648576639"; // Número de JMS Fontanería
 
     function setAveria(btn, averia) {
       document.querySelectorAll('.btn-averia').forEach(b => {
-        b.classList.remove('border-sky-500', 'bg-sky-950/40', 'text-sky-300');
+        b.classList.remove('border-blue-500', 'bg-blue-950/40', 'text-blue-300');
       });
-      btn.classList.add('border-sky-500', 'bg-sky-950/40', 'text-sky-300');
+      btn.classList.add('border-blue-500', 'bg-blue-950/40', 'text-blue-300');
       averiaSeleccionada = averia;
     }
 
     function setZona(btn, zona) {
       document.querySelectorAll('.btn-zona').forEach(b => {
-        b.classList.remove('border-sky-500', 'bg-sky-950/40', 'text-sky-300');
+        b.classList.remove('border-blue-500', 'bg-blue-950/40', 'text-blue-300');
       });
-      btn.classList.add('border-sky-500', 'bg-sky-950/40', 'text-sky-300');
+      btn.classList.add('border-blue-500', 'bg-blue-950/40', 'text-blue-300');
       zonaSeleccionada = zona;
     }
 
     function enviarWhatsAppPresupuesto() {
-      const msg = `Hola JMS Fontanería, necesito presupuesto para un trabajo de: ${averiaSeleccionada} en la zona de ${zonaSeleccionada}. Adjunto detalles/foto de la avería.`;
+      const msg = `Hola JMS Fontanería, necesito presupuesto para un trabajo de: ${averiaSeleccionada} en la zona de ${zonaSeleccionada}. Adjunto detalles y foto de la avería.`;
       window.open(`https://wa.me/${telefonoWhatsApp}?text=${encodeURIComponent(msg)}`, '_blank');
     }
 
-    function toggleAuditoria() {
-      const p = document.getElementById('panel-auditoria');
-      p.classList.toggle('hidden');
+    function enviarFormulario() {
+      const nom = document.getElementById('form-nombre').value;
+      const tel = document.getElementById('form-telefono').value;
+      const men = document.getElementById('form-mensaje').value;
+      const msg = `Hola JMS Fontanería, mi nombre es ${nom} (Tel: ${tel}). Consulta: ${men}`;
+      window.open(`https://wa.me/${telefonoWhatsApp}?text=${encodeURIComponent(msg)}`, '_blank');
     }
   </script>
 </body>
