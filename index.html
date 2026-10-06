@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kinetic Fisioterapia | Clínica Colegiada en Málaga desde 2007</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JMS Fontanería Málaga | Reparación de Averías, Fugas y Desatascos</title>
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Lucide Icons -->
@@ -13,1062 +13,364 @@
       theme: {
         extend: {
           colors: {
-            brand: {
-              DEFAULT: '#82B412',
-              50: '#f6fbe9',
-              100: '#edf7d0',
-              200: '#dbefa7',
-              300: '#c2e374',
-              400: '#a3d23f',
-              500: '#82B412',
-              600: '#69950c',
-              700: '#50730d',
-              800: '#415b10',
-              900: '#384d12',
-            },
-            charcoal: {
-              DEFAULT: '#1C1917',
-              muted: '#44403C',
-              subtle: '#78716C'
+            jms: {
+              blue: '#0284c7',       // Azul fontanería profesional
+              blueDark: '#0369a1',
+              navy: '#0f172a',
+              accent: '#38bdf8',
+              surface: '#f8fafc'
             }
-          },
-          fontFamily: {
-            sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
           }
         }
       }
     }
   </script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-    .badge-glow {
-      box-shadow: 0 0 20px -3px rgba(130, 180, 18, 0.25);
-    }
-    .hero-gradient {
-      background: radial-gradient(120% 120% at 50% 0%, #FAFAF9 60%, #F5F5F4 100%);
-    }
-  </style>
 </head>
-<body class="bg-[#FAFAF9] text-charcoal font-sans antialiased selection:bg-brand-100 selection:text-brand-900">
+<body class="bg-slate-50 text-slate-800 antialiased font-sans selection:bg-sky-500 selection:text-white pb-24">
 
-  <!-- 1. Top Utility Header Bar -->
-  <div class="bg-stone-900 text-stone-300 text-xs py-2 px-4 border-b border-stone-800">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+  <!-- BARRA DE AUDITORÍA SUPERIOR (Para demostración y comparativa en vídeo) -->
+  <aside class="bg-slate-900 text-slate-300 text-xs px-4 py-2 border-b border-slate-800 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
       <div class="flex items-center gap-2">
-        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-brand-900/60 text-brand-300 border border-brand-700/50">
-          <i data-lucide="award" class="w-3.5 h-3.5 mr-1 text-brand-400"></i>
-          Centro Colegiado ICPFA Nº 1120
-        </span>
-        <span class="hidden md:inline text-stone-500">•</span>
-        <span class="text-stone-300 font-medium flex items-center gap-1.5">
-          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i>
-          Cuidando la salud de Málaga ininterrumpidamente desde 2007
-        </span>
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Propuesta Técnica de Rendimiento: <strong>JMS Fontanería Málaga</strong></span>
       </div>
-      <div class="flex items-center gap-5 text-stone-300">
-        <a href="tel:+34952394033" class="hover:text-brand-400 transition-colors flex items-center gap-1.5 font-medium">
-          <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-400"></i>
-          952 394 033
-        </a>
-        <a href="tel:+34669583225" class="hover:text-brand-400 transition-colors flex items-center gap-1.5 font-semibold text-white">
-          <i data-lucide="smartphone" class="w-3.5 h-3.5 text-brand-400"></i>
-          669 583 225
-        </a>
-        <span class="hidden sm:inline text-stone-600">|</span>
-        <div class="hidden sm:flex items-center gap-2 text-stone-400">
-          <i data-lucide="clock" class="w-3.5 h-3.5"></i>
-          <span>Lun - Vie: 09:00 - 21:00</span>
-        </div>
+      <div class="flex items-center gap-3">
+        <span class="text-slate-400 hidden sm:inline">Unidades Móviles en toda la provincia</span>
+        <button onclick="toggleAuditoria()" class="bg-slate-800 hover:bg-slate-700 text-white px-2.5 py-0.5 rounded text-[11px] border border-slate-700">
+          ¿Qué se ha optimizado?
+        </button>
       </div>
     </div>
-  </div>
+  </aside>
 
-  <!-- Primary Navigation -->
-  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-stone-200/80 transition-all">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
-        
-        <!-- Brand Authentic Logo -->
-        <a href="#" class="flex items-center gap-3.5 group">
-          <div class="relative flex items-center">
-            <!-- Authentic kinetic dual triangles: 1 outline upward, 1 solid lime downward -->
-            <svg class="w-9 h-9" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Left hollow triangle with lime border -->
-              <polygon points="12,82 48,18 48,82" stroke="#82B412" stroke-width="8" stroke-linejoin="round" fill="none"/>
-              <!-- Right solid lime inverted triangle -->
-              <polygon points="52,18 88,18 70,82" fill="#82B412" stroke="#82B412" stroke-width="2" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="flex flex-col">
-            <span class="text-2xl font-extrabold tracking-tight text-stone-900 group-hover:text-stone-700 transition">
-              kinetic<span class="text-brand-500 font-light ml-1.5 text-xl">fisioterapia</span>
-            </span>
-            <span class="text-[10px] uppercase font-bold tracking-widest text-stone-400 -mt-1">
-              Clínica de Fisioterapia &amp; Readaptación • Málaga
-            </span>
-          </div>
-        </a>
+  <!-- PANEL DESPLEGABLE DE AUDITORÍA -->
+  <section id="panel-auditoria" class="hidden bg-white border-b border-slate-200 px-6 py-4 text-xs text-slate-700 shadow-inner">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div>
+        <strong class="text-slate-900 block mb-1">1. Fricción Telefónica Eliminada:</strong>
+        <p class="text-slate-600">Se unifican los números dispersos en accesos directos de llamada y WhatsApp con mensaje precargado.</p>
+      </div>
+      <div>
+        <strong class="text-slate-900 block mb-1">2. Presupuesto con Foto Inmediato:</strong>
+        <p class="text-slate-600">El cliente elige avería y localidad (Málaga, Torremolinos, Mijas...), agilizando el cálculo de costes para el técnico.</p>
+      </div>
+      <div>
+        <strong class="text-slate-900 block mb-1">3. Confianza y Garantía:</strong>
+        <p class="text-slate-600">Presencia destacada de empresa autorizada, taller propio de materiales y cobertura provincial rápida.</p>
+      </div>
+    </div>
+  </section>
 
-        <!-- Desktop Navigation Links -->
-        <nav class="hidden lg:flex items-center gap-8">
-          <a href="#servicios" class="text-sm font-semibold text-stone-700 hover:text-brand-600 transition-colors py-1 flex items-center gap-1">
-            Especialidades Clínicas
-          </a>
-          <a href="#convenios" class="text-sm font-semibold text-stone-700 hover:text-brand-600 transition-colors py-1">
-            Convenios &amp; Colectivos
-          </a>
-          <a href="#experiencia" class="text-sm font-semibold text-stone-700 hover:text-brand-600 transition-colors py-1">
-            El Equipo
-          </a>
-          <a href="#donde-estamos" class="text-sm font-semibold text-stone-700 hover:text-brand-600 transition-colors py-1">
-            Dónde Estamos
-          </a>
-        </nav>
+  <!-- CABECERA PRINCIPAL -->
+  <header class="bg-white border-b border-slate-200 sticky top-8 z-40 shadow-sm">
+    <div class="max-w-6xl mx-auto px-5 py-3.5 flex items-center justify-between">
+      <!-- Logo Oficial Extraído -->
+      <a href="#" class="flex items-center">
+        <img src="https://fontaneriamalaga.com/wp-content/uploads/2023/04/LOGO-JMS.png" alt="JMS Fontanería Málaga" class="h-10 sm:h-12 w-auto object-contain" />
+      </a>
 
-        <!-- CTA Header Action -->
-        <div class="flex items-center gap-3">
-          <a href="https://wa.me/34669583225?text=Hola,%20quisiera%20solicitar%20cita%20previa%20en%20Kinetic%20Fisioterapia" 
-             target="_blank"
-             class="hidden sm:inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold bg-emerald-600 text-white hover:bg-emerald-700 transition-all shadow-sm shadow-emerald-700/20 active:scale-95">
-            <i data-lucide="message-circle" class="w-4 h-4"></i>
-            <span>WhatsApp Cita</span>
-          </a>
-          <a href="#reserva-rapida" 
-             class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-bold bg-brand-500 text-white hover:bg-brand-600 transition-all shadow-md shadow-brand-500/20 active:scale-95">
-            <i data-lucide="calendar" class="w-4 h-4"></i>
-            <span>Pedir Cita Previa</span>
-          </a>
+      <!-- Contacto de Llamada Rápida -->
+      <div class="flex items-center gap-3">
+        <div class="hidden md:flex flex-col text-right text-xs">
+          <span class="text-slate-500 font-medium">Atención Inmediata</span>
+          <a href="tel:648576639" class="font-extrabold text-slate-900 hover:text-sky-600 text-sm">648 57 66 39</a>
         </div>
+        <a href="tel:648576639" class="inline-flex items-center gap-2 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-md transition">
+          <i data-lucide="phone-call" class="w-4 h-4"></i>
+          <span>Llamar Ahora</span>
+        </a>
       </div>
     </div>
   </header>
 
-  <!-- 2. Hero Section (Authority + Real Treatment) -->
-  <section class="relative overflow-hidden pt-8 pb-16 lg:pt-14 lg:pb-24 hero-gradient border-b border-stone-200">
-    <!-- Subtle Grid Background -->
-    <div class="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:28px_28px] pointer-events-none"></div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-        
-        <!-- Left Hero Copy -->
-        <div class="lg:col-span-7 space-y-6">
-          
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-stone-200 shadow-sm">
-            <span class="w-2.5 h-2.5 rounded-full bg-brand-500 animate-pulse"></span>
-            <span class="text-xs font-semibold text-stone-700 tracking-wide">
-              Tratamientos individualizados en consulta privada • Sin esperas
-            </span>
-          </div>
-
-          <h1 class="text-4xl sm:text-5xl lg:text-[52px] font-extrabold text-stone-900 tracking-tight leading-[1.12]">
-            Fisioterapia personalizada y <span class="text-brand-600 underline decoration-brand-300 decoration-wavy decoration-2">recuperación activa</span> de lesiones en Málaga
-          </h1>
-
-          <p class="text-lg text-stone-600 leading-relaxed font-normal max-w-2xl">
-            Desde 2007 entendemos la salud como el <strong class="text-stone-900 font-semibold">bienestar integral del paciente</strong>. Sin masajes protocolizados ni camillas en serie: diagnóstico clínico exhaustivo, terapia manual avanzada y punción seca aplicada por profesionales colegiados.
-          </p>
-
-          <!-- Core Value Badges -->
-          <div class="grid grid-cols-3 gap-3 pt-1">
-            <div class="bg-white p-3.5 rounded-xl border border-stone-200/80 shadow-xs">
-              <div class="text-brand-600 font-bold text-xl sm:text-2xl">+17 años</div>
-              <div class="text-xs text-stone-500 font-medium mt-0.5">En Miraflores de los Ángeles</div>
-            </div>
-            <div class="bg-white p-3.5 rounded-xl border border-stone-200/80 shadow-xs">
-              <div class="text-brand-600 font-bold text-xl sm:text-2xl">1 a 1</div>
-              <div class="text-xs text-stone-500 font-medium mt-0.5">Atención 100% individual</div>
-            </div>
-            <div class="bg-white p-3.5 rounded-xl border border-stone-200/80 shadow-xs">
-              <div class="text-brand-600 font-bold text-xl sm:text-2xl">Colegiado</div>
-              <div class="text-xs text-stone-500 font-medium mt-0.5">Colegio Oficial de Andalucía</div>
-            </div>
-          </div>
-
-          <!-- CTAs Area -->
-          <div class="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-            <a href="https://wa.me/34669583225?text=Hola,%20quisiera%20pedir%20cita%20en%20Kinetic%20Fisioterapia" 
-               target="_blank"
-               class="inline-flex items-center justify-center gap-3 px-6 py-4 rounded-xl text-base font-bold bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-700/20 transition-all transform hover:-translate-y-0.5 active:translate-y-0">
-              <i data-lucide="message-circle" class="w-5 h-5"></i>
-              <span>Solicitar cita por WhatsApp (669 583 225)</span>
-            </a>
-            <a href="#donde-estamos" 
-               class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-base font-semibold bg-white hover:bg-stone-100 text-stone-800 border border-stone-300 transition-all">
-              <i data-lucide="map-pin" class="w-5 h-5 text-brand-600"></i>
-              <span>Ver localización y autobuses</span>
-            </a>
-          </div>
-
-          <!-- Urgency / Direct Call helper -->
-          <p class="text-xs text-stone-500 flex items-center gap-2 pt-1">
-            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i>
-            <span>¿Dolor agudo o urgencia? Llámanos directamente al <a href="tel:+34952394033" class="font-bold text-stone-800 hover:underline">952 394 033</a></span>
-          </p>
-
-        </div>
-
-        <!-- Right Hero Visual (Real Clinic Therapy Photo) -->
-        <div class="lg:col-span-5 relative">
-          <div class="relative mx-auto max-w-md lg:max-w-none">
-            
-            <!-- Glow background effect -->
-            <div class="absolute -inset-2 bg-gradient-to-r from-brand-300/40 to-emerald-300/40 rounded-3xl blur-xl opacity-70"></div>
-            
-            <!-- Main Real Photo Card with Clean Frame -->
-            <div class="relative bg-white p-3 rounded-2xl shadow-xl border border-stone-200">
-              <div class="relative rounded-xl overflow-hidden aspect-[4/3] bg-stone-100">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPWLbXWGYPJzAhfL3cG5PlcYr7VhvW23yZaPMDA4S82XaaT5BTcrPqq4E0FNL8E3Qc3GTtbaEdEaTQUQJaYxiSHqMslDM4_1nIDVmsaoL2QZWCJv7Jgx2CkTjWWnxHoYwQ9PEg0e9krTtkPOdGV7g748Z_KhDW2E_9LbMfk6cgzLIpC9W5aLrMfnZHLqzCbbTJO5PMVOU4NEx-NJOYjYsS73dNIRFyO9_YPLU0EtsC-2FBBg0mAnId" 
-                     alt="Tratamiento de punción seca y terapia manual en Kinetic Fisioterapia Málaga" 
-                     class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-500" />
-                <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/20 to-transparent"></div>
-                
-                <!-- Authentic Tag Retained from Original Site -->
-                <div class="absolute bottom-4 left-4 right-4 text-white">
-                  <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-black/60 backdrop-blur-md border border-white/20 text-xs font-semibold uppercase tracking-wider mb-1 text-brand-300">
-                    <i data-lucide="activity" class="w-3.5 h-3.5"></i>
-                    Especialistas en dolor miofascial
-                  </div>
-                  <h3 class="text-lg font-bold leading-tight drop-shadow-sm">
-                    "Nuestra experiencia a su disposición"
-                  </h3>
-                  <p class="text-xs text-stone-300 mt-0.5">Terapia manual clínica y punción seca ecoguiada</p>
-                </div>
-              </div>
-
-              <!-- Floating Micro-Badge -->
-              <div class="mt-3 p-3 bg-stone-50 rounded-xl border border-stone-200 flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                  <div class="w-10 h-10 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold">
-                    <i data-lucide="user-check" class="w-5 h-5"></i>
-                  </div>
-                  <div>
-                    <h4 class="text-xs font-bold text-stone-900">Tratamiento 100% Personalizado</h4>
-                    <p class="text-[11px] text-stone-500">Evaluación exhaustiva previa a cualquier técnica</p>
-                  </div>
-                </div>
-                <span class="inline-flex items-center text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded-full border border-brand-200">
-                  Sin listas
-                </span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- 3. Social Proof & Official Partnerships (Convenios y Descuentos) -->
-  <section id="convenios" class="py-12 bg-white border-b border-stone-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- HERO SECTION CON CERTIDUMBRE Y SERVICIOS -->
+  <section class="max-w-6xl mx-auto px-5 pt-8 pb-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
       
-      <div class="text-center max-w-3xl mx-auto mb-8">
-        <span class="text-xs font-bold tracking-widest uppercase text-brand-600 bg-brand-50 px-3 py-1 rounded-full border border-brand-200">
-          Convenios Institucionales &amp; Descuentos
-        </span>
-        <h2 class="text-2xl font-bold text-stone-900 mt-2">
-          Entidades y colectivos con acuerdos especiales
-        </h2>
-        <p class="text-sm text-stone-500 mt-1">
-          Tarifas preferentes y convenios de atención directa para empleados, socios y afiliados acreditados.
+      <div class="lg:col-span-7 space-y-5">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 text-xs font-semibold text-sky-900">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-sky-600"></i>
+          Empresa Autorizada de Fontanería en Málaga
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+          Reparación de averías, <span class="text-sky-600">fugas de agua</span> y desatascos sin sorpresas
+        </h1>
+
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed max-w-xl">
+          Servicios integrales para particulares, empresas y comunidades de propietarios. Taller propio de materiales, localización de fugas sin romper y sustitución de termos y tuberías.
         </p>
-      </div>
 
-      <!-- Clean Horizontal Trust Bar with Brand Badges -->
-      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 items-center">
-        
-        <!-- Metro Málaga -->
-        <div class="p-4 bg-stone-50 rounded-xl border border-stone-200/80 hover:border-brand-300 transition-all text-center flex flex-col items-center justify-center h-24 group">
-          <div class="text-red-600 font-black text-xl tracking-tighter group-hover:scale-105 transition-transform">
-            MM
-          </div>
-          <span class="text-[11px] font-bold text-stone-700 mt-1">Metro Málaga</span>
-          <span class="text-[9px] text-stone-400">Convenio Oficial</span>
-        </div>
-
-        <!-- Sindicato Unificado de Policía (SUP) -->
-        <div class="p-4 bg-stone-50 rounded-xl border border-stone-200/80 hover:border-brand-300 transition-all text-center flex flex-col items-center justify-center h-24 group">
-          <div class="text-blue-800 font-extrabold text-base tracking-wider group-hover:scale-105 transition-transform">
-            S.U.P.
-          </div>
-          <span class="text-[11px] font-bold text-stone-700 mt-1">Policía Nacional</span>
-          <span class="text-[9px] text-stone-400">Afiliados SUP</span>
-        </div>
-
-        <!-- SIP-AN Policía Local -->
-        <div class="p-4 bg-stone-50 rounded-xl border border-stone-200/80 hover:border-brand-300 transition-all text-center flex flex-col items-center justify-center h-24 group">
-          <div class="text-indigo-900 font-extrabold text-base tracking-wide group-hover:scale-105 transition-transform">
-            SIP·AN
-          </div>
-          <span class="text-[11px] font-bold text-stone-700 mt-1">Policía Local</span>
-          <span class="text-[9px] text-stone-400">Convenio Colectivo</span>
-        </div>
-
-        <!-- SATSE Enfermería -->
-        <div class="p-4 bg-stone-50 rounded-xl border border-stone-200/80 hover:border-brand-300 transition-all text-center flex flex-col items-center justify-center h-24 group">
-          <div class="text-emerald-700 font-extrabold text-base tracking-tight group-hover:scale-105 transition-transform">
-            SATSE
-          </div>
-          <span class="text-[11px] font-bold text-stone-700 mt-1">Sindicato Enfermería</span>
-          <span class="text-[9px] text-stone-400">Personal Sanitario</span>
-        </div>
-
-        <!-- UMA - Universidad de Málaga -->
-        <div class="p-4 bg-stone-50 rounded-xl border border-stone-200/80 hover:border-brand-300 transition-all text-center flex flex-col items-center justify-center h-24 group">
-          <div class="text-sky-800 font-extrabold text-base tracking-tight group-hover:scale-105 transition-transform">
-            UMA
-          </div>
-          <span class="text-[11px] font-bold text-stone-700 mt-1">Univ. de Málaga</span>
-          <span class="text-[9px] text-stone-400">Comunidad UMA</span>
-        </div>
-
-        <!-- Federación Andaluza de Ciclismo -->
-        <div class="p-4 bg-stone-50 rounded-xl border border-stone-200/80 hover:border-brand-300 transition-all text-center flex flex-col items-center justify-center h-24 group">
-          <div class="text-emerald-600 font-extrabold text-base tracking-tight group-hover:scale-105 transition-transform">
-            FAC
-          </div>
-          <span class="text-[11px] font-bold text-stone-700 mt-1">Fed. And. Ciclismo</span>
-          <span class="text-[9px] text-stone-400">Federados</span>
-        </div>
-
-        <!-- ICPFA / Junta de Andalucía -->
-        <div class="p-4 bg-stone-50 rounded-xl border border-stone-200/80 hover:border-brand-300 transition-all text-center flex flex-col items-center justify-center h-24 group">
-          <div class="text-brand-600 font-extrabold text-base tracking-tight group-hover:scale-105 transition-transform">
-            ICPFA
-          </div>
-          <span class="text-[11px] font-bold text-stone-700 mt-1">Colegio Oficial</span>
-          <span class="text-[9px] text-stone-400">Junta de Andalucía</span>
-        </div>
-
-      </div>
-
-      <!-- Additional Affiliations Note -->
-      <div class="mt-6 flex flex-wrap items-center justify-center gap-4 text-xs text-stone-500 font-medium">
-        <span>También con descuentos para:</span>
-        <span class="inline-flex items-center gap-1.5 bg-stone-100 px-3 py-1 rounded-full text-stone-700">
-          <i data-lucide="check" class="w-3.5 h-3.5 text-brand-600"></i> MiColchón
-        </span>
-        <span class="inline-flex items-center gap-1.5 bg-stone-100 px-3 py-1 rounded-full text-stone-700">
-          <i data-lucide="check" class="w-3.5 h-3.5 text-brand-600"></i> J. Sarría Entrenamientos
-        </span>
-        <span class="inline-flex items-center gap-1.5 bg-stone-100 px-3 py-1 rounded-full text-stone-700">
-          <i data-lucide="check" class="w-3.5 h-3.5 text-brand-600"></i> CS24 Canal Salud
-        </span>
-        <span class="inline-flex items-center gap-1.5 bg-stone-100 px-3 py-1 rounded-full text-stone-700">
-          <i data-lucide="check" class="w-3.5 h-3.5 text-brand-600"></i> OP-PLUS
-        </span>
-        <span class="inline-flex items-center gap-1.5 bg-stone-100 px-3 py-1 rounded-full text-stone-700">
-          <i data-lucide="check" class="w-3.5 h-3.5 text-brand-600"></i> AUMAT Taxi Málaga
-        </span>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- 4. Clinical Specialties Grid (Structured from Original Raw Bullets) -->
-  <section id="servicios" class="py-16 sm:py-20 bg-[#FAFAF9] border-b border-stone-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-        <div class="max-w-2xl">
-          <span class="text-xs font-bold tracking-widest uppercase text-brand-600 bg-brand-50 px-3 py-1 rounded-full border border-brand-200">
-            Tratamientos Especializados
-          </span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight mt-3">
-            Especialidades Clínicas &amp; Fisioterapia Avanzada
-          </h2>
-          <p class="text-base text-stone-600 mt-2">
-            Metodología basada en la evidencia científica y la experiencia manual acumulada en consulta desde 2007.
-          </p>
-        </div>
-        <div class="mt-4 md:mt-0">
-          <a href="#reserva-rapida" class="inline-flex items-center gap-2 text-sm font-bold text-brand-600 hover:text-brand-700">
-            Consultar caso específico <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        <!-- Botones de Acción -->
+        <div class="flex flex-col sm:flex-row gap-3 pt-2">
+          <a href="#cotizador" class="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-md transition">
+            <i data-lucide="message-circle" class="w-5 h-5"></i>
+            Pedir Presupuesto por WhatsApp (648 57 66 39)
+          </a>
+          <a href="tel:951770440" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-800 font-semibold text-xs sm:text-sm px-5 py-3.5 rounded-xl border border-slate-300 transition">
+            <i data-lucide="phone" class="w-4 h-4 text-slate-600"></i>
+            Fijo: 951 77 04 40
           </a>
         </div>
+
+        <!-- Badges de Garantía -->
+        <div class="pt-4 flex flex-wrap gap-y-2 gap-x-6 text-xs text-slate-500 border-t border-slate-200">
+          <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-sky-600"></i> Taller propio de recambios</span>
+          <span class="flex items-center gap-1.5"><i data-lucide="truck" class="w-4 h-4 text-sky-600"></i> Unidades móviles equipadas</span>
+          <span class="flex items-center gap-1.5"><i data-lucide="file-text" class="w-4 h-4 text-sky-600"></i> Factura y garantía oficial</span>
+        </div>
       </div>
 
-      <!-- 6 Service Cards Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <!-- Card 1: Traumatología y Deportiva -->
-        <div class="bg-white rounded-2xl p-7 border border-stone-200/90 shadow-sm hover:shadow-md hover:border-brand-400 transition-all flex flex-col justify-between group">
-          <div>
-            <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-5 group-hover:bg-brand-500 group-hover:text-white transition-colors">
-              <i data-lucide="activity" class="w-6 h-6"></i>
-            </div>
-            <h3 class="text-xl font-bold text-stone-900 group-hover:text-brand-600 transition-colors">
-              Lesiones Traumatológicas y Deportivas
-            </h3>
-            <p class="text-sm text-stone-600 mt-2.5 leading-relaxed">
-              Tratamiento integral y readaptación acelerada para volver a tu rutina sin recaídas.
-            </p>
-            <div class="mt-4 pt-4 border-t border-stone-100 space-y-2">
-              <span class="text-xs font-semibold text-stone-700 block">Patologías habituales:</span>
-              <ul class="text-xs text-stone-500 space-y-1.5">
-                <li class="flex items-center gap-2">
-                  <i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i>
-                  Esguinces de tobillo, rodilla y ligamentos
-                </li>
-                <li class="flex items-center gap-2">
-                  <i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i>
-                  Tendinitis, sobrecargas y roturas fibrilares
-                </li>
-                <li class="flex items-center gap-2">
-                  <i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i>
-                  Recuperación post-fracturas y cirugías
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between">
-            <span class="text-xs font-semibold text-brand-700">Sesión 1 a 1 de 50 min</span>
-            <button onclick="selectTreatment('Traumatología y Deporte')" class="text-xs font-bold text-stone-800 hover:text-brand-600 flex items-center gap-1">
-              Pedir cita <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-            </button>
+      <!-- Imagen Real de Fontanería Extraída -->
+      <div class="lg:col-span-5">
+        <div class="relative rounded-2xl overflow-hidden border border-slate-200 shadow-xl bg-white">
+          <img 
+            src="https://fontaneriamalaga.com/wp-content/uploads/2023/05/JMS-fontaneria-provincia-Malaga.jpg" 
+            alt="JMS Fontanería en Málaga" 
+            class="w-full h-72 sm:h-80 object-cover"
+          />
+          <div class="absolute bottom-0 inset-x-0 bg-slate-900/85 px-4 py-3 text-white flex items-center justify-between text-xs backdrop-blur-sm">
+            <span class="font-bold text-sky-400">Atención técnica autorizada</span>
+            <span class="text-slate-300">Toda la provincia</span>
           </div>
         </div>
-
-        <!-- Card 2: Punción Seca Miofascial -->
-        <div class="bg-white rounded-2xl p-7 border-2 border-brand-400 shadow-md relative flex flex-col justify-between group">
-          <div class="absolute -top-3 right-6 bg-brand-500 text-white text-[11px] font-bold uppercase tracking-wider px-3 py-0.5 rounded-full">
-            Técnica Estrella
-          </div>
-          <div>
-            <div class="w-12 h-12 rounded-xl bg-brand-500 text-white flex items-center justify-center mb-5">
-              <i data-lucide="crosshair" class="w-6 h-6"></i>
-            </div>
-            <h3 class="text-xl font-bold text-stone-900 group-hover:text-brand-600 transition-colors">
-              Punción Seca Miofascial
-            </h3>
-            <p class="text-sm text-stone-600 mt-2.5 leading-relaxed">
-              Técnica semi-invasiva de máxima eficacia para desactivar puntos gatillo y aliviar contracturas musculares profundas y rebeldes.
-            </p>
-            <div class="mt-4 pt-4 border-t border-stone-100 space-y-2">
-              <span class="text-xs font-semibold text-stone-700 block">Indicado para:</span>
-              <ul class="text-xs text-stone-500 space-y-1.5">
-                <li class="flex items-center gap-2">
-                  <i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i>
-                  Síndrome de dolor miofascial crónico
-                </li>
-                <li class="flex items-center gap-2">
-                  <i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i>
-                  Cervicalgias tensionales y cefaleas
-                </li>
-                <li class="flex items-center gap-2">
-                  <i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i>
-                  Puntos de activación en trapecios y lumbares
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between">
-            <span class="text-xs font-semibold text-brand-700">Fisioterapeuta experto colegiado</span>
-            <button onclick="selectTreatment('Punción Seca')" class="text-xs font-bold text-stone-800 hover:text-brand-600 flex items-center gap-1">
-              Pedir cita <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Card 3: Fisioterapia de Suelo Pélvico -->
-        <div class="bg-white rounded-2xl p-7 border border-stone-200/90 shadow-sm hover:shadow-md hover:border-brand-400 transition-all flex flex-col justify-between group">
-          <div>
-            <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-5 group-hover:bg-brand-500 group-hover:text-white transition-colors">
-              <i data-lucide="heart" class="w-6 h-6"></i>
-            </div>
-            <h3 class="text-xl font-bold text-stone-900 group-hover:text-brand-600 transition-colors">
-              Fisioterapia de Suelo Pélvico
-            </h3>
-            <p class="text-sm text-stone-600 mt-2.5 leading-relaxed">
-              Tratamientos especializados en un entorno de máxima confianza y privacidad tanto preventivos como recuperadores.
-            </p>
-            <div class="mt-4 pt-4 border-t border-stone-100 space-y-2">
-              <span class="text-xs font-semibold text-stone-700 block">Áreas de intervención:</span>
-              <ul class="text-xs text-stone-500 space-y-1.5">
-                <li class="flex items-center gap-2">
-                  <i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i>
-                  Preparación al parto y recuperación postparto
-                </li>
-                <li class="flex items-center gap-2">
-                  <i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i>
-                  Incontinencia urinaria y prolapsos
-                </li>
-                <li class="flex items-center gap-2">
-                  <i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i>
-                  Lumbalgias gestacionales y disfunciones
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between">
-            <span class="text-xs font-semibold text-brand-700">Consulta privada y discreta</span>
-            <button onclick="selectTreatment('Suelo Pélvico')" class="text-xs font-bold text-stone-800 hover:text-brand-600 flex items-center gap-1">
-              Pedir cita <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Card 4: Drenaje Linfático Manual -->
-        <div class="bg-white rounded-2xl p-7 border border-stone-200/90 shadow-sm hover:shadow-md hover:border-brand-400 transition-all flex flex-col justify-between group">
-          <div>
-            <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-5 group-hover:bg-brand-500 group-hover:text-white transition-colors">
-              <i data-lucide="droplets" class="w-6 h-6"></i>
-            </div>
-            <h3 class="text-xl font-bold text-stone-900 group-hover:text-brand-600 transition-colors">
-              Drenaje Linfático Manual
-            </h3>
-            <p class="text-sm text-stone-600 mt-2.5 leading-relaxed">
-              Maniobras suaves y precisas que estimulan el sistema linfático, acelerando la eliminación de toxinas y fluidos retenidos.
-            </p>
-            <div class="mt-4 pt-4 border-t border-stone-100 space-y-2">
-              <span class="text-xs font-semibold text-stone-700 block">Indicado para:</span>
-              <ul class="text-xs text-stone-500 space-y-1.5">
-                <li class="flex items-center gap-2">
-                  <i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i>
-                  Edemas, retención y piernas cansadas
-                </li>
-                <li class="flex items-center gap-2">
-                  <i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i>
-                  Postoperatorios de cirugía estética / liposucción
-                </li>
-                <li class="flex items-center gap-2">
-                  <i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i>
-                  Linfedemas y procesos oncológicos
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between">
-            <span class="text-xs font-semibold text-brand-700">Técnica manual 100% no invasiva</span>
-            <button onclick="selectTreatment('Drenaje Linfático')" class="text-xs font-bold text-stone-800 hover:text-brand-600 flex items-center gap-1">
-              Pedir cita <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Card 5: Terapia Manual y Reumatología -->
-        <div class="bg-white rounded-2xl p-7 border border-stone-200/90 shadow-sm hover:shadow-md hover:border-brand-400 transition-all flex flex-col justify-between group">
-          <div>
-            <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-5 group-hover:bg-brand-500 group-hover:text-white transition-colors">
-              <i data-lucide="shield" class="w-6 h-6"></i>
-            </div>
-            <h3 class="text-xl font-bold text-stone-900 group-hover:text-brand-600 transition-colors">
-              Terapia Manual y Reumatología
-            </h3>
-            <p class="text-sm text-stone-600 mt-2.5 leading-relaxed">
-              Alivio del dolor persistente y preservación de la movilidad articular en enfermedades crónicas y degenerativas.
-            </p>
-            <div class="mt-4 pt-4 border-t border-stone-100 space-y-2">
-              <span class="text-xs font-semibold text-stone-700 block">Abordaje especializado:</span>
-              <ul class="text-xs text-stone-500 space-y-1.5">
-                <li class="flex items-center gap-2">
-                  <i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i>
-                  Artrosis, artritis reumatoide y rigidez
-                </li>
-                <li class="flex items-center gap-2">
-                  <i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i>
-                  Fibromialgia y fatiga musculoesquelética
-                </li>
-                <li class="flex items-center gap-2">
-                  <i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i>
-                  Movilizaciones articulares sin dolor
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between">
-            <span class="text-xs font-semibold text-brand-700">Enfoque conservador y calmante</span>
-            <button onclick="selectTreatment('Terapia Manual')" class="text-xs font-bold text-stone-800 hover:text-brand-600 flex items-center gap-1">
-              Pedir cita <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Card 6: Kinesiotaping y Ejercicio Terapéutico -->
-        <div class="bg-white rounded-2xl p-7 border border-stone-200/90 shadow-sm hover:shadow-md hover:border-brand-400 transition-all flex flex-col justify-between group">
-          <div>
-            <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-5 group-hover:bg-brand-500 group-hover:text-white transition-colors">
-              <i data-lucide="sparkles" class="w-6 h-6"></i>
-            </div>
-            <h3 class="text-xl font-bold text-stone-900 group-hover:text-brand-600 transition-colors">
-              Kinesiotaping y Ejercicio Activo
-            </h3>
-            <p class="text-sm text-stone-600 mt-2.5 leading-relaxed">
-              Programas de ejercicio personalizado y vendaje neuromuscular para consolidar la recuperación articular y muscular.
-            </p>
-            <div class="mt-4 pt-4 border-t border-stone-100 space-y-2">
-              <span class="text-xs font-semibold text-stone-700 block">Beneficios clave:</span>
-              <ul class="text-xs text-stone-500 space-y-1.5">
-                <li class="flex items-center gap-2">
-                  <i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i>
-                  Soporte dinámico y estabilidad propioceptiva
-                </li>
-                <li class="flex items-center gap-2">
-                  <i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i>
-                  Estimulación de la microcirculación linfática
-                </li>
-                <li class="flex items-center gap-2">
-                  <i data-lucide="check" class="w-3.5 h-3.5 text-brand-500"></i>
-                  Pautas guiadas de readaptación a domicilio
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between">
-            <span class="text-xs font-semibold text-brand-700">Autonomía y prevención activa</span>
-            <button onclick="selectTreatment('Kinesiotaping y Ejercicio')" class="text-xs font-bold text-stone-800 hover:text-brand-600 flex items-center gap-1">
-              Pedir cita <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-            </button>
-          </div>
-        </div>
-
       </div>
 
     </div>
   </section>
 
-  <!-- 5. Interactive WhatsApp Booking Triage (Replacing the static 5-field form) -->
-  <section id="reserva-rapida" class="py-16 sm:py-24 bg-white border-b border-stone-200 relative">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-2xl mx-auto mb-10">
-        <span class="text-xs font-bold tracking-widest uppercase text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
-          Cita Previa Ágil • Sin Esperas
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight mt-3">
-          Reserva tu cita en 2 simples pasos
-        </h2>
-        <p class="text-base text-stone-600 mt-2">
-          Te atenderemos directamente por WhatsApp para coordinar tu cita según disponibilidad real del fisioterapeuta.
-        </p>
+  <!-- BANDA DE COBERTURA PROVINCIAL -->
+  <section class="max-w-6xl mx-auto px-5 py-4">
+    <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
+      <p class="text-center text-xs font-bold uppercase tracking-widest text-slate-500 mb-3">
+        Unidades Móviles con Asistencia en:
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs font-semibold text-slate-700">
+        <span class="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">Málaga Capital</span>
+        <span class="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">Torremolinos</span>
+        <span class="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">Benalmádena</span>
+        <span class="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">Fuengirola</span>
+        <span class="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">Mijas</span>
+        <span class="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">Rincón de la Victoria</span>
       </div>
-
-      <!-- Triage Widget Card -->
-      <div class="bg-[#FAFAF9] rounded-3xl p-6 sm:p-10 border border-stone-200 shadow-lg">
-        
-        <form id="triageForm" onsubmit="event.preventDefault(); sendToWhatsApp();" class="space-y-8">
-          
-          <!-- Step 1: Select Treatment / Problem -->
-          <div>
-            <div class="flex items-center gap-3 mb-4">
-              <span class="w-7 h-7 rounded-full bg-brand-500 text-white font-bold text-sm flex items-center justify-center">1</span>
-              <label class="text-base font-bold text-stone-900">
-                ¿Qué tipo de tratamiento o dolencia necesitas tratar?
-              </label>
-            </div>
-            
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3" id="treatmentOptions">
-              <button type="button" onclick="setTreatment(this, 'Fisioterapia General / Lesión')" class="treatment-btn active px-4 py-3 rounded-xl border-2 border-brand-500 bg-brand-50 text-brand-900 font-semibold text-xs sm:text-sm text-left transition-all flex flex-col justify-between">
-                <span>Lesión / Traumatología</span>
-                <span class="text-[10px] text-brand-700 mt-1">Dolor articular, esguinces</span>
-              </button>
-
-              <button type="button" onclick="setTreatment(this, 'Punción Seca Miofascial')" class="treatment-btn px-4 py-3 rounded-xl border border-stone-300 bg-white hover:border-brand-400 text-stone-700 font-semibold text-xs sm:text-sm text-left transition-all flex flex-col justify-between">
-                <span>Punción Seca</span>
-                <span class="text-[10px] text-stone-400 mt-1">Contracturas profundas</span>
-              </button>
-
-              <button type="button" onclick="setTreatment(this, 'Suelo Pélvico')" class="treatment-btn px-4 py-3 rounded-xl border border-stone-300 bg-white hover:border-brand-400 text-stone-700 font-semibold text-xs sm:text-sm text-left transition-all flex flex-col justify-between">
-                <span>Suelo Pélvico</span>
-                <span class="text-[10px] text-stone-400 mt-1">Embarazo, postparto</span>
-              </button>
-
-              <button type="button" onclick="setTreatment(this, 'Drenaje Linfático')" class="treatment-btn px-4 py-3 rounded-xl border border-stone-300 bg-white hover:border-brand-400 text-stone-700 font-semibold text-xs sm:text-sm text-left transition-all flex flex-col justify-between">
-                <span>Drenaje Linfático</span>
-                <span class="text-[10px] text-stone-400 mt-1">Retención, postquirúrgico</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Step 2: Select Preferred Schedule & Name -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-stone-200">
-            <div>
-              <div class="flex items-center gap-3 mb-3">
-                <span class="w-7 h-7 rounded-full bg-brand-500 text-white font-bold text-sm flex items-center justify-center">2</span>
-                <label class="text-base font-bold text-stone-900">
-                  Preferencia horaria
-                </label>
-              </div>
-              <div class="grid grid-cols-2 gap-3" id="scheduleOptions">
-                <button type="button" onclick="setSchedule(this, 'Mañanas (09:00 a 14:00)')" class="schedule-btn active px-4 py-3 rounded-xl border-2 border-brand-500 bg-brand-50 text-brand-900 font-semibold text-xs sm:text-sm text-center transition-all">
-                  ☀️ Mañanas<br><span class="text-[10px] text-brand-700">09:00 - 14:00</span>
-                </button>
-                <button type="button" onclick="setSchedule(this, 'Tardes (16:00 a 21:00)')" class="schedule-btn px-4 py-3 rounded-xl border border-stone-300 bg-white hover:border-brand-400 text-stone-700 font-semibold text-xs sm:text-sm text-center transition-all">
-                  🌙 Tardes<br><span class="text-[10px] text-stone-400">16:00 - 21:00</span>
-                </button>
-              </div>
-            </div>
-
-            <!-- Optional Patient Name -->
-            <div>
-              <div class="flex items-center gap-2 mb-3">
-                <i data-lucide="user" class="w-5 h-5 text-stone-500"></i>
-                <label class="text-base font-bold text-stone-900">Tu nombre (opcional)</label>
-              </div>
-              <input type="text" id="patientName" placeholder="Ej: María García" class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-stone-900 bg-white text-sm" />
-              <p class="text-[11px] text-stone-400 mt-1">Facilita preparar tu ficha antes de contactarte.</p>
-            </div>
-          </div>
-
-          <!-- Conversion Button -->
-          <div class="pt-4 border-t border-stone-200">
-            <button type="submit" class="w-full py-4 px-6 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base sm:text-lg flex items-center justify-center gap-3 shadow-lg shadow-emerald-700/25 transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer">
-              <i data-lucide="message-circle" class="w-6 h-6"></i>
-              <span>Enviar mensaje de cita directa a WhatsApp</span>
-              <i data-lucide="arrow-right" class="w-5 h-5 ml-1"></i>
-            </button>
-            <p class="text-center text-xs text-stone-500 mt-3 flex items-center justify-center gap-1.5">
-              <i data-lucide="lock" class="w-3.5 h-3.5 text-stone-400"></i>
-              <span>Conexión directa con la clínica (+34 669 583 225) • Sin intermediarios ni comisiones</span>
-            </p>
-          </div>
-
-        </form>
-
-      </div>
-
     </div>
   </section>
 
-  <!-- 6. Interactive Location & Public Transit (Barrio Miraflores de los Ángeles) -->
-  <section id="donde-estamos" class="py-16 sm:py-24 bg-[#FAFAF9] border-b border-stone-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="max-w-2xl mb-12">
-        <span class="text-xs font-bold tracking-widest uppercase text-brand-600 bg-brand-50 px-3 py-1 rounded-full border border-brand-200">
-          Ubicación &amp; Accesibilidad
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight mt-3">
-          Nos encontramos en Málaga
-        </h2>
-        <p class="text-base text-stone-600 mt-2">
-          Ubicados en el barrio de Miraflores de los Ángeles, con acceso inmejorable tanto en vehículo propio como en transporte público EMT.
-        </p>
+  <!-- MÓDULO INTERACTIVO DE PRESUPUESTO RÁPIDO CON FOTO -->
+  <section id="cotizador" class="max-w-2xl mx-auto px-5 py-8">
+    <div class="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+      <div class="text-center mb-6">
+        <span class="text-xs font-bold uppercase tracking-widest text-sky-400">Presupuesto en 1 Clic</span>
+        <h3 class="text-xl sm:text-2xl font-black mt-1">¿Qué avería necesitas solucionar?</h3>
+        <p class="text-slate-400 text-xs mt-1">Selecciona el tipo de trabajo y tu zona para abrir WhatsApp con los datos ya completados.</p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        
-        <!-- Left: Transit & Postal Details -->
-        <div class="lg:col-span-6 space-y-6">
-          
-          <!-- Address Card -->
-          <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-xs">
-            <div class="flex items-start gap-4">
-              <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0">
-                <i data-lucide="map-pin" class="w-6 h-6"></i>
-              </div>
-              <div>
-                <h3 class="text-lg font-bold text-stone-900">Dirección Postal de la Clínica</h3>
-                <p class="text-sm text-stone-700 font-semibold mt-1">
-                  Kinetic Fisioterapia
-                </p>
-                <p class="text-sm text-stone-600">
-                  Camino de Suárez, 103, 2ºA<br>
-                  29010 Málaga (Barrio Miraflores)
-                </p>
-                <div class="mt-3 flex items-center gap-3">
-                  <a href="https://maps.google.com/?q=Camino+de+Suarez+103+Malaga+Kinetic+Fisioterapia" 
-                     target="_blank"
-                     class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 hover:text-brand-700 underline">
-                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-                    Abrir en Google Maps
-                  </a>
-                  <span class="text-stone-300">•</span>
-                  <span class="text-xs text-stone-500">Edificio con ascensor adaptado</span>
-                </div>
-              </div>
-            </div>
+      <div class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-2">1. Tipo de avería o servicio:</label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+            <button type="button" onclick="setAveria(this, 'Fuga de agua o Humedad')" class="btn-averia bg-slate-800 border border-slate-700 py-3 px-3 rounded-xl hover:border-sky-400 text-left">
+              Fuga de agua / Humedad
+            </button>
+            <button type="button" onclick="setAveria(this, 'Desatasco de tubería o fregadero')" class="btn-averia bg-slate-800 border border-slate-700 py-3 px-3 rounded-xl hover:border-sky-400 text-left">
+              Desatasco urgente
+            </button>
+            <button type="button" onclick="setAveria(this, 'Cambio o reparación de Termo / Calentador')" class="btn-averia bg-slate-800 border border-slate-700 py-3 px-3 rounded-xl hover:border-sky-400 text-left">
+              Termos y calentadores
+            </button>
+            <button type="button" onclick="setAveria(this, 'Grifería, Sanitarios o Reforma')" class="btn-averia bg-slate-800 border border-slate-700 py-3 px-3 rounded-xl hover:border-sky-400 text-left">
+              Grifería / Sanitarios / Baño
+            </button>
           </div>
-
-          <!-- EMT Málaga Transit Card -->
-          <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-xs">
-            <div class="flex items-center gap-3 mb-4">
-              <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
-                <i data-lucide="bus" class="w-5 h-5"></i>
-              </div>
-              <div>
-                <h3 class="text-base font-bold text-stone-900">Cómo llegar en Autobús (EMT Málaga)</h3>
-                <p class="text-xs text-stone-500">Paradas directas a menos de 50 metros del centro</p>
-              </div>
-            </div>
-
-            <div class="space-y-3">
-              <div class="flex items-center gap-3 p-2.5 rounded-lg bg-stone-50 border border-stone-100">
-                <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-blue-600 text-white font-bold text-xs">6</span>
-                <div class="text-xs">
-                  <strong class="text-stone-800">Línea 6:</strong> Parada en Camino Suárez
-                </div>
-              </div>
-
-              <div class="flex items-center gap-3 p-2.5 rounded-lg bg-stone-50 border border-stone-100">
-                <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-blue-600 text-white font-bold text-xs">7</span>
-                <div class="text-xs">
-                  <strong class="text-stone-800">Línea 7:</strong> Parada en Camino Suárez y Rotonda
-                </div>
-              </div>
-
-              <div class="flex items-center gap-3 p-2.5 rounded-lg bg-stone-50 border border-stone-100">
-                <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-blue-600 text-white font-bold text-xs">18</span>
-                <div class="text-xs">
-                  <strong class="text-stone-800">Línea 18:</strong> Parada en Camino Suárez - Rotonda
-                </div>
-              </div>
-
-              <div class="flex items-center gap-3 p-2.5 rounded-lg bg-stone-50 border border-stone-100">
-                <div class="flex gap-1">
-                  <span class="inline-flex items-center justify-center px-2 h-8 rounded-lg bg-amber-600 text-white font-bold text-xs">C1</span>
-                  <span class="inline-flex items-center justify-center px-2 h-8 rounded-lg bg-amber-600 text-white font-bold text-xs">C2</span>
-                </div>
-                <div class="text-xs">
-                  <strong class="text-stone-800">Líneas Circulares C1 y C2:</strong> Parada Martínez de la Rosa / Rotonda Suárez
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Contact Channels Info -->
-          <div class="bg-stone-900 text-white rounded-2xl p-6">
-            <h4 class="text-sm font-bold uppercase tracking-wider text-brand-400 mb-3">Atención al Paciente &amp; Teléfonos</h4>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-              <div>
-                <span class="text-stone-400 block">Teléfono Fijo:</span>
-                <a href="tel:+34952394033" class="text-white font-bold text-sm hover:text-brand-400">952 394 033</a>
-              </div>
-              <div>
-                <span class="text-stone-400 block">Móvil / WhatsApp:</span>
-                <a href="tel:+34669583225" class="text-emerald-400 font-bold text-sm hover:underline">669 583 225</a>
-              </div>
-              <div>
-                <span class="text-stone-400 block">Correo Oficial:</span>
-                <a href="mailto:info@kineticfisioterapia.com" class="text-stone-300 hover:text-white">info@kineticfisioterapia.com</a>
-              </div>
-              <div>
-                <span class="text-stone-400 block">Horario Continuado:</span>
-                <span class="text-stone-300">Lunes a Viernes 9:00 - 21:00</span>
-              </div>
-            </div>
-          </div>
-
         </div>
 
-        <!-- Right: Map Card with Authentic Visual Reference -->
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-2">2. Zona o municipio:</label>
+          <div class="grid grid-cols-3 gap-2 text-xs">
+            <button type="button" onclick="setZona(this, 'Málaga Capital')" class="btn-zona bg-slate-800 border border-slate-700 py-2.5 px-2 rounded-xl hover:border-sky-400 text-center font-medium">
+              Málaga Centro / Barrios
+            </button>
+            <button type="button" onclick="setZona(this, 'Costa Occidental (Torremolinos, Fuengirola, Mijas)')" class="btn-zona bg-slate-800 border border-slate-700 py-2.5 px-2 rounded-xl hover:border-sky-400 text-center font-medium">
+              Costa Occidental
+            </button>
+            <button type="button" onclick="setZona(this, 'Rincón de la Victoria / Axarquía')" class="btn-zona bg-slate-800 border border-slate-700 py-2.5 px-2 rounded-xl hover:border-sky-400 text-center font-medium">
+              Rincón de la Victoria
+            </button>
+          </div>
+        </div>
+
+        <button onclick="enviarWhatsAppPresupuesto()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black py-4 px-4 rounded-xl text-sm flex items-center justify-center gap-2 transition shadow-lg mt-2">
+          <i data-lucide="message-circle" class="w-5 h-5"></i>
+          <span>Enviar avería por WhatsApp para presupuesto rápido</span>
+        </button>
+
+        <p class="text-center text-[11px] text-slate-400">
+          Puedes adjuntar una foto de la avería al abrir WhatsApp para agilizar el diagnóstico.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS PRINCIPALES (Reestructurados en Tarjetas Limpias) -->
+  <section class="max-w-6xl mx-auto px-5 py-10">
+    <div class="text-center max-w-xl mx-auto mb-10">
+      <span class="text-xs font-bold uppercase tracking-wider text-sky-600">Servicios Especializados</span>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Fontanería Profesional y Reformas</h2>
+      <p class="text-xs sm:text-sm text-slate-600 mt-1">Equipamiento técnico para resolver incidencias domésticas o comunitarias.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <!-- 1. Fugas -->
+      <article class="bg-white border border-slate-200 p-6 rounded-2xl hover:border-sky-500 transition shadow-sm">
+        <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center mb-3">
+          <i data-lucide="search" class="w-5 h-5"></i>
+        </div>
+        <h3 class="font-bold text-base text-slate-900 mb-2">Localización de Fugas de Agua</h3>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          Detección técnica de fugas ocultas y humedades en paredes y suelos minimizando obras innecesarias.
+        </p>
+      </article>
+
+      <!-- 2. Desatascos -->
+      <article class="bg-white border border-slate-200 p-6 rounded-2xl hover:border-sky-500 transition shadow-sm">
+        <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center mb-3">
+          <i data-lucide="droplet" class="w-5 h-5"></i>
+        </div>
+        <h3 class="font-bold text-base text-slate-900 mb-2">Desatascos y Limpieza de Tuberías</h3>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          Desobstrucción rápida de fregaderos, inodoros, botes sifónicos, arquetas y bajantes comunitarias.
+        </p>
+      </article>
+
+      <!-- 3. Tuberías y Descalcificación -->
+      <article class="bg-white border border-slate-200 p-6 rounded-2xl hover:border-sky-500 transition shadow-sm">
+        <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center mb-3">
+          <i data-lucide="wrench" class="w-5 h-5"></i>
+        </div>
+        <h3 class="font-bold text-base text-slate-900 mb-2">Instalación y Descalcificación</h3>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          Sustitución de tuberías de plomo o hierro por cobre o multicapa, y limpieza de cal para recuperar presión.
+        </p>
+      </article>
+
+      <!-- 4. Termos y Calentadores -->
+      <article class="bg-white border border-slate-200 p-6 rounded-2xl hover:border-sky-500 transition shadow-sm">
+        <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center mb-3">
+          <i data-lucide="flame" class="w-5 h-5"></i>
+        </div>
+        <h3 class="font-bold text-base text-slate-900 mb-2">Termos y Calentadores</h3>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          Suministro e instalación urgente de termos eléctricos y calentadores de gas de primeras marcas.
+        </p>
+      </article>
+
+      <!-- 5. Grifería y Sanitarios -->
+      <article class="bg-white border border-slate-200 p-6 rounded-2xl hover:border-sky-500 transition shadow-sm">
+        <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center mb-3">
+          <i data-lucide="bath" class="w-5 h-5"></i>
+        </div>
+        <h3 class="font-bold text-base text-slate-900 mb-2">Griferías y Sanitarios</h3>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          Montaje y reparación de llaves de paso, cisternas con fugas, lavabos, bidés e inodoros.
+        </p>
+      </article>
+
+      <!-- 6. Reformas de Albañilería -->
+      <article class="bg-white border border-slate-200 p-6 rounded-2xl hover:border-sky-500 transition shadow-sm">
+        <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center mb-3">
+          <i data-lucide="hammer" class="w-5 h-5"></i>
+        </div>
+        <h3 class="font-bold text-base text-slate-900 mb-2">Cambio de Bañera por Ducha</h3>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          Servicio integral de albañilería: alicatados, solados, pladur y adaptación accesible de cuartos de baño.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- UBICACIÓN Y TALLER PROPIO -->
+  <section class="max-w-6xl mx-auto px-5 py-8">
+    <div class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-6 space-y-4">
+          <span class="text-xs font-bold uppercase tracking-wider text-sky-600">Sede y Taller Oficial</span>
+          <h3 class="text-2xl font-black text-slate-900">JMS Fontanería en Málaga</h3>
+          
+          <div class="space-y-1.5 text-xs text-slate-600">
+            <p><strong>Dirección:</strong> Calle Ibrahin 18, Local 12, 29011 Málaga.</p>
+            <p><strong>Teléfonos:</strong> 951 77 04 40 / 648 57 66 39 / 635 15 43 30</p>
+            <p><strong>Email:</strong> fontaneromalaga@gmail.com</p>
+          </div>
+
+          <p class="text-xs text-slate-600">
+            Disponemos de taller propio de materiales para garantizar recambios inmediatos en tuberías, piezas de calderas y grifería sin demoras de intermediarios.
+          </p>
+
+          <div>
+            <a href="https://maps.google.com/?q=Calle+Ibrahin+18+Malaga" target="_blank" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold px-4 py-2.5 rounded-lg transition">
+              <i data-lucide="navigation" class="w-4 h-4 text-sky-400"></i> Abrir en Google Maps
+            </a>
+          </div>
+        </div>
+
         <div class="lg:col-span-6">
-          <div class="bg-white rounded-2xl p-4 border border-stone-200 shadow-md">
-            
-            <div class="relative rounded-xl overflow-hidden aspect-[4/3] bg-stone-100 border border-stone-200">
-              <!-- Using the authentic map screenshot from the clinic's records -->
-              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtGgDuRI0EdJRbUY2yzwE86ZC4QSZKFUPJYMlWQUKxwEGpsMTVeAr7YGVxqtbFlQ3f9KPcHe_CUnnQSS-1rDQqeZrxs5x1MBqnyNZ26bEQmK6ejB2VIsqX3vffKC_V_B22XPdllTsl5R5qMzOaiXJrGbsjA26WS3aE3sN8U5WVOilgtiSlDIduhZrtQ3Rz2TSHnulJbqoGbLhJVlrgpsIF42AUrp81S6Nw0O3RwCskMvgcA_cpBybF" 
-                   alt="Mapa de localización Kinetic Fisioterapia en Camino de Suárez Málaga" 
-                   class="w-full h-full object-cover" />
-              
-              <div class="absolute inset-0 bg-stone-900/10 hover:bg-transparent transition-colors"></div>
-
-              <!-- Map Pin Overlay Marker -->
-              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
-                <div class="bg-stone-900 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-lg border border-brand-500 flex items-center gap-1.5 whitespace-nowrap animate-bounce">
-                  <span class="w-2 h-2 rounded-full bg-brand-500"></span>
-                  Kinetic Fisioterapia (2ºA)
-                </div>
-                <div class="w-4 h-4 bg-brand-500 rotate-45 -mt-2"></div>
-              </div>
-
-              <!-- Open in Maps Action Button Over Map -->
-              <div class="absolute bottom-4 right-4">
-                <a href="https://maps.google.com/?q=Camino+de+Suarez+103+Malaga+Kinetic+Fisioterapia" 
-                   target="_blank"
-                   class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-stone-900/90 hover:bg-stone-900 text-white text-xs font-bold backdrop-blur-md shadow-lg transition">
-                  <i data-lucide="navigation" class="w-4 h-4 text-brand-400"></i>
-                  Cómo llegar con GPS
-                </a>
-              </div>
-            </div>
-
-            <div class="mt-4 px-2 flex items-center justify-between text-xs text-stone-500">
-              <span>Camino de Suárez, 103, 2ºA, Málaga</span>
-              <span class="text-brand-600 font-semibold">Fácil aparcamiento en la zona</span>
-            </div>
-
+          <div class="rounded-2xl overflow-hidden border border-slate-300 shadow-md h-72 sm:h-80 w-full bg-slate-200">
+            <iframe 
+              title="Ubicación de JMS Fontanería"
+              src="https://maps.google.com/maps?q=Calle%20Ibrahin%2018%20Malaga&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              class="w-full h-full border-0" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
           </div>
         </div>
 
       </div>
-
     </div>
   </section>
 
-  <!-- 7. Footer -->
-  <footer class="bg-stone-950 text-stone-400 text-xs py-14">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-12 border-b border-stone-800">
-        
-        <!-- Col 1: Brand Info -->
-        <div class="space-y-4">
-          <div class="flex items-center gap-3">
-            <svg class="w-8 h-8" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <polygon points="12,82 48,18 48,82" stroke="#82B412" stroke-width="8" stroke-linejoin="round" fill="none"/>
-              <polygon points="52,18 88,18 70,82" fill="#82B412" stroke="#82B412" stroke-width="2" stroke-linejoin="round"/>
-            </svg>
-            <span class="text-xl font-bold text-white tracking-tight">kinetic <span class="text-brand-500 font-light">fisioterapia</span></span>
-          </div>
-          <p class="text-stone-400 text-xs leading-relaxed">
-            Clínica de fisioterapia, osteopatía y rehabilitación funcional en Málaga. Colegiados oficiales comprometidos con el trato humano y la evidencia clínica desde 2007.
-          </p>
-          <div class="pt-2">
-            <span class="inline-block text-[11px] bg-stone-900 text-stone-300 px-2.5 py-1 rounded border border-stone-800">
-              Colegio Profesional de Fisioterapeutas de Andalucía
-            </span>
-          </div>
-        </div>
+  <!-- BOTÓN FLOTANTE PERMANENTE -->
+  <aside class="fixed bottom-5 right-5 z-40">
+    <button onclick="enviarWhatsAppPresupuesto()" class="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-black py-3 px-5 rounded-full shadow-2xl transition transform hover:scale-105 border border-emerald-400/40">
+      <i data-lucide="message-circle" class="w-5 h-5"></i>
+      <span class="text-xs sm:text-sm">Presupuesto WhatsApp</span>
+    </button>
+  </aside>
 
-        <!-- Col 2: Enlaces Rápidos -->
-        <div>
-          <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4">Tratamientos</h4>
-          <ul class="space-y-2 text-stone-400 text-xs">
-            <li><a href="#servicios" class="hover:text-brand-400 transition">Lesiones Traumatológicas y Deportivas</a></li>
-            <li><a href="#servicios" class="hover:text-brand-400 transition">Punción Seca de Puntos Gatillo</a></li>
-            <li><a href="#servicios" class="hover:text-brand-400 transition">Fisioterapia del Suelo Pélvico</a></li>
-            <li><a href="#servicios" class="hover:text-brand-400 transition">Drenaje Linfático Manual</a></li>
-            <li><a href="#servicios" class="hover:text-brand-400 transition">Kinesiotaping y Vendaje Neuromuscular</a></li>
-            <li><a href="#servicios" class="hover:text-brand-400 transition">Reeducación Funcional Activa</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 3: Convenios -->
-        <div>
-          <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4">Convenios &amp; Colectivos</h4>
-          <ul class="space-y-2 text-stone-400 text-xs">
-            <li><a href="#convenios" class="hover:text-brand-400 transition">Metro Málaga</a></li>
-            <li><a href="#convenios" class="hover:text-brand-400 transition">Sindicato Unificado de Policía (SUP)</a></li>
-            <li><a href="#convenios" class="hover:text-brand-400 transition">SIP-AN Policía Local</a></li>
-            <li><a href="#convenios" class="hover:text-brand-400 transition">SATSE Sindicato de Enfermería</a></li>
-            <li><a href="#convenios" class="hover:text-brand-400 transition">Universidad de Málaga (UMA)</a></li>
-            <li><a href="#convenios" class="hover:text-brand-400 transition">Federación Andaluza de Ciclismo</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 4: Contacto Inmediato -->
-        <div>
-          <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4">Cita Previa</h4>
-          <p class="text-xs text-stone-400 mb-3">
-            Para garantizar una atención personalizada y sin esperas, atendemos exclusivamente con cita acordada.
-          </p>
-          <div class="space-y-2">
-            <a href="tel:+34952394033" class="block font-bold text-brand-400 hover:text-brand-300 text-sm">
-              <i data-lucide="phone" class="w-3.5 h-3.5 inline mr-1"></i> 952 394 033
-            </a>
-            <a href="tel:+34669583225" class="block font-bold text-emerald-400 hover:text-emerald-300 text-sm">
-              <i data-lucide="smartphone" class="w-3.5 h-3.5 inline mr-1"></i> 669 583 225
-            </a>
-          </div>
-          <div class="mt-4">
-            <a href="#reserva-rapida" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-brand-600 hover:bg-brand-500 text-white font-semibold text-xs transition">
-              Pedir cita online
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Legal & Copyright -->
-      <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] text-stone-500">
-        <div>
-          © 2007 - 2025 Kinetic Fisioterapia. Todos los derechos reservados. Camino de Suárez 103, 2ºA, 29010 Málaga.
-        </div>
-        <div class="flex items-center gap-4">
-          <a href="#" class="hover:text-stone-300">Aviso Legal</a>
-          <span>•</span>
-          <a href="#" class="hover:text-stone-300">Política de Privacidad</a>
-          <span>•</span>
-          <a href="#" class="hover:text-stone-300">Colegio Fisioterapeutas</a>
-        </div>
-      </div>
-
-    </div>
-  </footer>
-
-  <!-- 8. Sticky Floating WhatsApp / Phone Action (Mobile & Quick Desktop Access) -->
-  <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
-    <!-- Quick call pill -->
-    <a href="tel:+34952394033" 
-       class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-stone-900/90 hover:bg-stone-900 text-white text-xs font-semibold backdrop-blur-md shadow-md border border-stone-700 transition">
-      <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-400"></i>
-      Llamar: 952 394 033
-    </a>
-
-    <!-- Floating WhatsApp CTA Button -->
-    <a id="stickyWhatsappBtn"
-       href="https://wa.me/34669583225?text=Hola,%20quisiera%20pedir%20cita%20en%20Kinetic%20Fisioterapia" 
-       target="_blank"
-       class="flex items-center gap-2.5 px-4 py-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white shadow-xl shadow-emerald-900/30 transition-all transform hover:scale-105 active:scale-95 group">
-      <i data-lucide="message-circle" class="w-6 h-6 text-white group-hover:rotate-12 transition-transform"></i>
-      <div class="flex flex-col text-left pr-1">
-        <span class="text-[10px] uppercase font-bold tracking-wider text-emerald-200 leading-none">Pedir Cita</span>
-        <span class="text-xs font-extrabold leading-tight">WhatsApp</span>
-      </div>
-    </a>
-  </div>
-
+  <!-- SCRIPTS -->
   <script>
-    // Initialize Lucide Icons
     lucide.createIcons();
 
-    // Triage Interactive State
-    let currentTreatment = 'Fisioterapia General / Lesión';
-    let currentSchedule = 'Mañanas (09:00 a 14:00)';
+    let averiaSeleccionada = "Fuga de agua o Humedad";
+    let zonaSeleccionada = "Málaga Capital";
+    const telefonoWhatsApp = "34648576639"; // Número principal de JMS
 
-    function setTreatment(btn, treatment) {
-      document.querySelectorAll('.treatment-btn').forEach(b => {
-        b.classList.remove('active', 'border-2', 'border-brand-500', 'bg-brand-50', 'text-brand-900');
-        b.classList.add('border', 'border-stone-300', 'bg-white', 'text-stone-700');
-        b.querySelector('span:last-child').className = 'text-[10px] text-stone-400 mt-1';
+    function setAveria(btn, averia) {
+      document.querySelectorAll('.btn-averia').forEach(b => {
+        b.classList.remove('border-sky-500', 'bg-sky-950/40', 'text-sky-300');
       });
-      btn.classList.remove('border', 'border-stone-300', 'bg-white', 'text-stone-700');
-      btn.classList.add('active', 'border-2', 'border-brand-500', 'bg-brand-50', 'text-brand-900');
-      btn.querySelector('span:last-child').className = 'text-[10px] text-brand-700 mt-1';
-      currentTreatment = treatment;
+      btn.classList.add('border-sky-500', 'bg-sky-950/40', 'text-sky-300');
+      averiaSeleccionada = averia;
     }
 
-    function setSchedule(btn, schedule) {
-      document.querySelectorAll('.schedule-btn').forEach(b => {
-        b.classList.remove('active', 'border-2', 'border-brand-500', 'bg-brand-50', 'text-brand-900');
-        b.classList.add('border', 'border-stone-300', 'bg-white', 'text-stone-700');
-        b.querySelector('span').className = 'text-[10px] text-stone-400';
+    function setZona(btn, zona) {
+      document.querySelectorAll('.btn-zona').forEach(b => {
+        b.classList.remove('border-sky-500', 'bg-sky-950/40', 'text-sky-300');
       });
-      btn.classList.remove('border', 'border-stone-300', 'bg-white', 'text-stone-700');
-      btn.classList.add('active', 'border-2', 'border-brand-500', 'bg-brand-50', 'text-brand-900');
-      btn.querySelector('span').className = 'text-[10px] text-brand-700';
-      currentSchedule = schedule;
+      btn.classList.add('border-sky-500', 'bg-sky-950/40', 'text-sky-300');
+      zonaSeleccionada = zona;
     }
 
-    function selectTreatment(treatmentName) {
-      const target = document.getElementById('reserva-rapida');
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-        // Match button if possible
-        const buttons = document.querySelectorAll('.treatment-btn');
-        for (let b of buttons) {
-          if (b.innerText.toLowerCase().includes(treatmentName.toLowerCase().slice(0, 5))) {
-            setTreatment(b, treatmentName);
-            break;
-          }
-        }
-      }
+    function enviarWhatsAppPresupuesto() {
+      const msg = `Hola JMS Fontanería, necesito presupuesto para un trabajo de: ${averiaSeleccionada} en la zona de ${zonaSeleccionada}. Adjunto detalles/foto de la avería.`;
+      window.open(`https://wa.me/${telefonoWhatsApp}?text=${encodeURIComponent(msg)}`, '_blank');
     }
 
-    function sendToWhatsApp() {
-      const name = document.getElementById('patientName').value.trim();
-      let text = `Hola, quisiera solicitar cita previa en Kinetic Fisioterapia.\n\n• Tratamiento: ${currentTreatment}\n• Horario preferente: ${currentSchedule}`;
-      if (name) {
-        text += `\n• Paciente: ${name}`;
-      }
-      text += `\n\n¿Qué disponibilidad tenéis esta semana? Muchas gracias.`;
-      
-      const encoded = encodeURIComponent(text);
-      const url = `https://wa.me/34669583225?text=${encoded}`;
-      window.open(url, '_blank');
+    function toggleAuditoria() {
+      const p = document.getElementById('panel-auditoria');
+      p.classList.toggle('hidden');
     }
   </script>
 </body>
