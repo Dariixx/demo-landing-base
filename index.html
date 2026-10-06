@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nombre del Negocio | Servicios Profesionales en Málaga</title>
+  <!-- Tailwind CSS por CDN para no requerir build local en demos rápidas -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Iconos Lucide -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans">
+
+  <!-- Header / Barra de navegación fija -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200 py-4 px-6 flex justify-between items-center max-w-6xl mx-auto">
+    <div class="font-bold text-xl tracking-tight text-slate-900 flex items-center gap-2">
+      <i data-lucide="shield-check" class="text-blue-600"></i>
+      <span id="brand-name">Nombre Negocio</span>
+    </div>
+    <a href="tel:600000000" class="hidden sm:inline-flex items-center gap-2 text-sm font-semibold text-slate-700 hover:text-blue-600">
+      <i data-lucide="phone" class="w-4 h-4"></i> Llamar directo
+    </a>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="max-w-5xl mx-auto px-6 pt-12 pb-16 text-center">
+    <span class="inline-flex items-center gap-1.5 py-1 px-3 rounded-full text-xs font-semibold bg-blue-100 text-blue-700 mb-4">
+      <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Servicio profesional en Málaga y provincia
+    </span>
+    <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight max-w-3xl mx-auto leading-tight">
+      Soluciones rápidas, garantizadas y con presupuesto cerrado
+    </h1>
+    <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+      Trabajos impecables con materiales de primera calidad. Consulta disponibilidad y recibe una valoración sin compromiso en menos de 24 horas.
+    </p>
+    <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="https://wa.me/34600000000?text=Hola,%20quisiera%20pedir%20presupuesto" class="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3.5 rounded-xl shadow-lg transition">
+        <i data-lucide="message-circle" class="w-5 h-5"></i> Pedir presupuesto por WhatsApp
+      </a>
+      <a href="#servicios" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-100 text-slate-800 font-semibold px-6 py-3.5 rounded-xl border border-slate-300 transition">
+        Ver servicios
+      </a>
+    </div>
+  </section>
+
+  <!-- Grid de Servicios Clave -->
+  <section id="servicios" class="max-w-5xl mx-auto px-6 py-12 border-t border-slate-200">
+    <h2 class="text-2xl font-bold text-slate-900 text-center mb-8">Nuestros Servicios Especializados</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- Card 1 -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+        <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-4">
+          <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2">Servicio Principal 1</h3>
+        <p class="text-sm text-slate-600">Descripción breve del servicio con enfoque en calidad y rapidez.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+        <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-4">
+          <i data-lucide="hammer" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2">Servicio Principal 2</h3>
+        <p class="text-sm text-slate-600">Descripción enfocada en solucionar el problema exacto del cliente.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+        <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-4">
+          <i data-lucide="clock" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2">Urgencias y Garantía</h3>
+        <p class="text-sm text-slate-600">Atención ágil con presupuesto previo sin sorpresas ni costes ocultos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Botón Flotante Persistente para Móvil -->
+  <aside class="fixed bottom-5 right-5 z-50">
+    <a href="https://wa.me/34600000000?text=Hola,%20vengo%20de%20la%20web%20y%20quiero%20información" target="_blank" class="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-5 rounded-full shadow-2xl transition transform hover:scale-105">
+      <i data-lucide="message-circle" class="w-6 h-6"></i>
+      <span>WhatsApp Directo</span>
+    </a>
+  </aside>
+
+  <!-- Inicializar iconos -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
